@@ -17,8 +17,8 @@ import android.widget.Toast;
 public class Get_koordinat_awal_akhir extends Activity{
 
 	// DB
-	Cursor cursor;	
-	
+	Cursor cursor;
+
 	int fix_simpul_awal = 0;
 	String explode_lat_only = "";	
 	Location posisiUser = new Location("");
@@ -125,7 +125,7 @@ public class Get_koordinat_awal_akhir extends Activity{
 
 			// VARIABEL BUAT CARI 1 JARAK DALAM 1 RECORD (1 record isinya banyak koordinat)			
 			// simpan jarak user ke koordinat simpul dalam meter
-			List<Double> jarakUserKeKoordinatSimpul = new ArrayList<Double>();	
+			List<Double> jarakUserKeKoordinatSimpul = new ArrayList<Double>();
 
 			cursor.moveToPosition(k);
 			

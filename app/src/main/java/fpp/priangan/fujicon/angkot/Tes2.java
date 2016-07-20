@@ -1,6 +1,5 @@
 package fpp.priangan.fujicon.angkot;
 
-import android.*;
 import android.Manifest;
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -22,7 +21,6 @@ import android.location.LocationManager;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.os.CountDownTimer;
 import android.os.Environment;
 import android.os.Handler;
 import android.provider.Settings;
@@ -33,7 +31,6 @@ import android.support.v4.view.GravityCompat;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -92,10 +89,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
-import java.util.Timer;
-import java.util.TimerTask;
 
-import fpp.priangan.fujicon.angkot.adapters.ViewPagerAdapterRute2;
+import fpp.priangan.fujicon.angkot.adapters.ViewPagerAdapterRute;
+import fpp.priangan.fujicon.angkot.adapters.ViewPagerAdapterRutetes2;
 import fpp.priangan.fujicon.angkot.djikstra2.Get_koordinat_awal_akhir;
 import fpp.priangan.fujicon.angkot.djikstra2.GraphToArray;
 import fpp.priangan.fujicon.angkot.djikstra2.SQLHelper;
@@ -112,6 +108,13 @@ public class Tes2 extends AppCompatActivity implements
         View.OnClickListener, LocationListener,NavigationView.OnNavigationItemSelectedListener,GoogleMap.OnMapClickListener {
     ///////////////////
     private Marker lastClicked;
+    String jalurhsplit,jalurhsplit2,replace_jalur;
+    String[] namesArr,namesArr2,namesArr3,namesArr5;
+    int [] namesArr4;
+    int ghh=0,posisank = 0;
+    ArrayList<String> list1jalur = new ArrayList<String>();
+    ArrayList<String> list1jalur2 = new ArrayList<String>();
+    ArrayList<String> list1jalur3 = new ArrayList<String>();
     // DB
     LatLng lokasiuserpertama,lokasitujuanpertama;
     public ProgressDialog dialog;
@@ -218,8 +221,8 @@ public class Tes2 extends AppCompatActivity implements
 //
     //  String []jarak = new String[100];
     int jkr;
-    String hj;
-    int jkr2;
+    String hj,awal_rute;
+    int jkr2,awal_rute_;
     String hj2;
     ArrayList<String> datajalantampung = new ArrayList<String>();
     String simpul1,simpul2;
@@ -455,7 +458,7 @@ public class Tes2 extends AppCompatActivity implements
                 .build();
 
 
-        viewPager = (ViewPager) findViewById(R.id.pager);
+        viewPager = (ViewPager) findViewById(R.id.pager2);
 
         bottomSheetLayout = (BottomSheetLayout) findViewById(R.id.bottomsheet);
         fab3 = (FloatingActionButton) findViewById(R.id.fab3);
@@ -2463,7 +2466,16 @@ public class Tes2 extends AppCompatActivity implements
         });
 
     }
+    public void onPageSelected(int pos) {
+        if(pos==1) {
+            try {
+                ghh = ghh + 1;
+                angkotda();
+            } catch (Exception e) {
 
+            }
+        }
+    }
 
     ////////////////edit1
     private AdapterView.OnItemClickListener mAutocompleteClickListener
@@ -2813,7 +2825,7 @@ public class Tes2 extends AppCompatActivity implements
 
     @Override
     public void onMapClick(LatLng latLng) {
-
+        viewPager.setVisibility(View.GONE);
         mMap.clear();
         fab5.setVisibility(View.GONE);
         fab3.setVisibility(View.GONE);
@@ -3997,9 +4009,9 @@ public class Tes2 extends AppCompatActivity implements
                         "Dari :"+filterAddress[0]);
                 filterAddress[0] = phoneNumber.toString();*/
                 String[] array = new String[nama_trayek.length + filterAddress.length];
-                adapter = new ViewPagerAdapterRute2(Tes2.this, filterAddress , filterAddress2,jarak);
+              //  adapter = new ViewPagerAdapterRute2(Tes2.this, filterAddress , filterAddress2,jarak);
 //		// Binds the Adapter to the ViewPager
-                viewPager.setAdapter(adapter);
+               // viewPager.setAdapter(adapter);
 
 
 
@@ -4686,7 +4698,7 @@ public class Tes2 extends AppCompatActivity implements
         SQLiteDatabase db = dbHelper.getReadableDatabase();
 
         for(int i = 0; i < exp.length-1; i++){
-
+            Toast.makeText(getApplicationContext(), exp[start]+"spank", Toast.LENGTH_LONG).show();
             //ArrayList<LatLng> lat_lng = new ArrayList<LatLng>();
 
             cursor = db.rawQuery("SELECT jalur FROM graph where simpul_awal ="+exp[start]+" and simpul_tujuan ="+exp[(++start)], null);
@@ -4731,7 +4743,7 @@ public class Tes2 extends AppCompatActivity implements
         LatLng amj= new LatLng(klat, klong);
         mMap.addMarker(new MarkerOptions()
                 .position(amj)
-                .title("Pemberhentian Akhir")
+                .title(amj+"Pemberhentian Akhir")
                 .snippet("Pemberhentian Akhir")
                 .icon(BitmapDescriptorFactory.fromResource(R.drawable.amj1))).showInfoWindow();
 
@@ -4911,58 +4923,45 @@ public class Tes2 extends AppCompatActivity implements
         }
 
 
-        String replace_jalur = gabungSimpul_all.replace(",,", ","); //  ,1-5,,5-6,,6-7, => ,1-5,5-6,6-7,
+        replace_jalur = gabungSimpul_all.replace(",,", ","); //  ,1-5,,5-6,,6-7, => ,1-5,5-6,6-7,
         Toast.makeText(getApplicationContext(), replace_jalur+"lurnya", Toast.LENGTH_LONG).show();
+        String[] jalursplit = replace_jalur.split(",");
+        int gh=jalursplit.length-1;
+
+
+        jalurhsplit = jalursplit[1];
+        jalurhsplit2 = jalursplit[gh];
+            Toast.makeText(getApplicationContext(), jalurhsplit+"1"+gh, Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), jalurhsplit2+"2", Toast.LENGTH_LONG).show();
+
         dialog.dismiss();
 
-
-    ////dalam array//////
-        String[] ff = new String[3];
-        cursor = db.rawQuery("SELECT * FROM angkutan_umum where simpul like '%" + replace_jalur + "%'", null);
+        cursor = db.rawQuery("SELECT * FROM angkutan_umum where simpul like '%" + jalurhsplit + "%' and simpul like '%" + jalurhsplit2 + "%'", null);
         cursor.moveToFirst();
 
-        String temp_index_baris = "";
-        int index_kolom = 0;
-        int jml_baris = cursor.getCount();
 
-        for(int i = 0; i < jml_baris; i++){
-
-            // baris
-            cursor.moveToPosition(i);
-
-            // Cari index kolom
-            int simpulAwalDB = Integer.parseInt(cursor.getString(1)); // simpul_tujuan
-
-            /*if(temp_index_baris == ""){
-                temp_index_baris = String.valueOf(simpulAwalDB);
-            }else{
-                // simpul_awal berikutnya tidak sama dgn sebelumnya, reset index_kolom = 0
-                if(Integer.parseInt(temp_index_baris) != simpulAwalDB){
-                    index_kolom = 0;
-                    temp_index_baris = String.valueOf(simpulAwalDB);
-                }
-            }
-*/
-            // masukkan ke graph array
-            String simpulTujuan_dan_Bobot = "";
-            if(cursor.getString(2).equals("")){ //tidak ada derajat keluar
-                simpulTujuan_dan_Bobot = ";";
-            }
-            // ada derajat keluar
-            else{
-
-                // example output : 2->789.98
-                simpulTujuan_dan_Bobot = cursor.getString(2).toString()+"->"+cursor.getString(4).toString(); //simpul_tujuan dan bobot
-            }
-
-            ff[simpulAwalDB]= simpulTujuan_dan_Bobot;
-            index_kolom++;
+        String[] nama_trayek = new String[0];
+        for(int ae = 0; ae < cursor.getCount(); ae++){
+            cursor.moveToPosition(ae);
+            list1jalur.add(cursor.getString(0).toString());
+            list1jalur2.add(cursor.getString(1).toString());
+            list1jalur3.add(cursor.getString(7).toString());
         }
-        ////dalam array//////
+        namesArr5 = list1jalur.toArray(new String[list1jalur.size()]);
+        namesArr2 = list1jalur2.toArray(new String[list1jalur2.size()]);
+        namesArr3 = list1jalur3.toArray(new String[list1jalur3.size()]);
+//
+//        for(int ){
+//
+//        }
 
 
+        Toast.makeText(getApplicationContext(), list1jalur2.size()+"jmlhnya"+namesArr2.length+namesArr3[0], Toast.LENGTH_LONG).show();
+//for(int yu=0; yu<=list1jalur.size();yu++) {
+//    Toast.makeText(getApplicationContext(), list1jalur.get(yu), Toast.LENGTH_LONG).show();
+//}
 
-
+        angkotda();
 
 
         cursor = db.rawQuery("SELECT * FROM angkutan_umum where simpul like '%" + replace_jalur + "%'", null);
@@ -4985,104 +4984,6 @@ public class Tes2 extends AppCompatActivity implements
             siangkotnya=siAngkot;
 
 
-            /*if(siangkotnya.equals("ST Hall - Gedebage")){
-                ank1="12";
-                posis=11;
-            }else if(siangkotnya.equals("ST Hall - Sarijadi")){
-                ank1="13";
-                posis=12;
-            }else if(siangkotnya.equals("Cikudapateh - Ciroyom")){
-                ank1="21";
-                posis=20;
-            }else if(siangkotnya.equals("Cimbuleuit - ST Hall via Eykman")){
-                ank1="11";
-                posis=10;
-            }else if(siangkotnya.equals("Buah Batu - Sederhana")){
-                ank1="22";
-                posis=21;
-            }else if(siangkotnya.equals("Dago - ST Hall")){
-                ank1="09";
-                posis=8;
-            }else if(siangkotnya.equals("ST Hall - Gunung Batu")){
-                ank1="14";
-                posis=13;
-            }else if(siangkotnya.equals("Margahayu - Ledeng")){
-                ank1="15";
-                posis=14;
-            }else if(siangkotnya.equals("Cicaheum - Ciwastra")){
-                ank1="07";
-                posis=6;
-            }else if(siangkotnya.equals("Caringin - Sadang Serang")){
-                ank1="34";
-                posis=28;
-
-            }else if(siangkotnya.equals("Caringin - Dago")){
-                ank1="17";
-                posis=16;
-            }else if(siangkotnya.equals("Cicaheum - Ledeng]")){
-                ank1="05";
-                posis=4;
-            }else if(siangkotnya.equals("Bumi Asri - Ciroyom")){
-                ank1="20";
-                posis=19;
-            }else if(siangkotnya.equals("Ciroyom - Sarijadi via Sukajadi")){
-                ank1="19";
-                posis=18;
-            }else if(siangkotnya.equals("Cisitu - Tegalega")){
-                ank1="26";
-                posis=23;
-            }else if(siangkotnya.equals("Abdulmuis - Elang")){
-                ank1="04";
-                posis=3;
-            }else if(siangkotnya.equals("Cicaheum - Ciroyom")){
-                ank1="06";
-                posis=5;
-            }else if(siangkotnya.equals("Cicaheum - Cibaduyut")){
-                ank1="08";
-                posis=7;
-            }else if(siangkotnya.equals("Cijerah - Ciwastra")){
-                ank1="27";
-                posis=24;
-            }else if(siangkotnya.equals("Cibiru - Cicadas")){
-                ank1="32";
-                posis=27;
-            }else if(siangkotnya.equals("Cibaduyut - Karang Setra")){
-                ank1="35";
-                posis=29;
-            }else if(siangkotnya.equals("Cibogo - Elang")){
-                ank1="36";
-                posis=30;
-            }else if(siangkotnya.equals("Antapani - Ciroyom")){
-                ank1="31";
-                posis=26;
-            }else if(siangkotnya.equals("Riung Bandung - Dago")){
-                ank1="16";
-                posis=15;
-            }else if(siangkotnya.equals("Abdulmuis - Cicaheum via Aceh")){
-                ank1="01B";
-                posis=0;
-            }else if(siangkotnya.equals("Abdulmuis - Ledeng")){
-                ank1="03";
-                posis=2;
-            }else if(siangkotnya.equals("ST Hall - Sadang Serang")){
-                ank1="10";
-                posis=9;
-            }else if(siangkotnya.equals("Buah Batu - Sederhana")){
-                ank1="22";
-                posis=21;
-            }else if(siangkotnya.equals("Abdulmuis - Dago")){
-                ank1="02";
-                posis=1;
-            }else if(siangkotnya.equals("Panghegar - Dipatiukur")){
-                ank1="19A";
-                posis=17;
-            }else if(siangkotnya.equals("Cijerah - Sederhana")){
-                ank1="22";
-                posis=21;
-            }else if(siangkotnya.equals("Cicadas - Elang")){
-                ank1="30";
-                posis=25;
-            }*/
             if(siangkotnya.equals("Abdulmuis - Cicaheum via Binong")){
                 posis=0;
                 ank1="01A";
@@ -5280,51 +5181,6 @@ public class Tes2 extends AppCompatActivity implements
 
 
             }
-////
-
-            /////gambar jalur
-            /*for(int i = 0; i < exp.length-1; i++){
-
-                ArrayList<LatLng> lat_lng = new ArrayList<LatLng>();
-
-                cursor = db.rawQuery("SELECT jalur FROM graph where simpul_awal ="+exp[start]+" and simpul_tujuan ="+exp[(++start)], null);
-                cursor.moveToFirst();
-
-
-                // dapatkan koordinat Lat,Lng dari field koordinat (3)
-                String json = cursor.getString(0).toString();
-
-                // get JSON
-                JSONObject jObject = new JSONObject(json);
-                JSONArray jArrCoordinates = jObject.getJSONArray("coordinates");
-
-                // get coordinate JSON
-                for(int w = 0; w < jArrCoordinates.length(); w++){
-
-                    JSONArray latlngs = jArrCoordinates.getJSONArray(w);
-                    Double lats = latlngs.getDouble(0);
-                    Double lngs = latlngs.getDouble(1);
-
-
-                    lat_lng.add( new LatLng(lats, lngs) );
-                    if(w==jArrCoordinates.length()-1){
-                        endl=new LatLng(lats, lngs);
-                        klat=lats;
-                        klong=lngs;
-
-                    }
-                }
-
-
-
-                // buat rute
-                PolylineOptions jalurBiasa = new PolylineOptions();
-                jalurBiasa.addAll(lat_lng).width(5).color(0xff00ff00).geodesic(true);
-                mMap.addPolyline(jalurBiasa);
-
-            }*/
-            /////////////////
-
 
             // get coordinate
             cursor = db.rawQuery("SELECT jalur FROM graph where simpul_awal = '" + simpulAwalDijkstra + "'", null);
@@ -7394,6 +7250,8 @@ public class Tes2 extends AppCompatActivity implements
 
     }
 
+
+
     public void getSimpulAwalAkhirJalur(Get_koordinat_awal_akhir objects, double latx, double lngx, String statusObject) throws JSONException{
 //        Toast.makeText(Tes2.this,latx +" gggg"+ lngx, Toast.LENGTH_SHORT).show();
 
@@ -7843,5 +7701,235 @@ public class Tes2 extends AppCompatActivity implements
 
     }
     // Setting a custom info window adapter for the google map
+    public void angkotda(){
+        String ff = null;
+        String ff1 = null;
+        int fgh[] = new int[0];
+        Integer[] namesArr = new Integer [list1jalur3.size()];
+        for (int i = 0; i < list1jalur2.size(); i++) {
+            ff = list1jalur2.get(ghh);
+        }
+        Toast.makeText(getApplicationContext(), ff+"ff", Toast.LENGTH_LONG).show();
 
+//        for (int i = 0; i < list1jalur3.size(); i++) {
+//            namesArr[i]= Integer.valueOf(list1jalur3.get(i));
+//        }
+        //Toast.makeText(getApplicationContext(), namesArr+"ff1", Toast.LENGTH_LONG).show();
+
+
+
+        String[] no= new String[] {
+                "01A","01B","02","03","04","05","06","07","08","09",
+                "10","11A","11B","12","13","14","15","16","17","18",
+                "19A","19B","20","21","22","23","24","25","26","27",
+                "28","41","30","31","32","33","34","35","36"
+        };
+
+        String[] nama_trayekw = new String[] {
+                "Abdulmuis - Cicaheum via Binong",
+                "Abdulmuis - Cicaheum via Aceh",
+                "Abdulmuis - Dago",
+                "Abdulmuis - Ledeng",
+                "Abdulmuis - Elang",
+                "Cicaheum - Ledeng",
+                "Cicaheum - Ciroyom",
+                "Cicaheum - Ciwastra",
+                "Cicaheum - Cibaduyut",
+                "Dago - ST Hall",
+                "ST Hall - Sadang Serang",
+                "Cimbuleuit - ST Hall via Eykman",
+                "Cimbuleuit - ST Hall via Cihampelas",
+                "ST Hall - Gedebage",
+                "ST Hall - Sarijadi",
+                "ST Hall - Gunung Batu",
+                "Margahayu - Ledeng",
+                "Riung Bandung - Dago",
+                "Caringin - Dago",
+                "Panghegar - Dipatiukur",
+                "Ciroyom - Sarijadi via Sukajadi",
+                "Ciroyom - Sarijadi via Setrasari",
+                "Bumi Asri - Ciroyom",
+                "Cikudapateh - Ciroyom",
+                "Buah Batu - Sederhana",
+                "Cijerah - Sederhana",
+                "Sederhana - Cimindi",
+                "Ciwastra - Ujungberung",
+                "Cisitu - Tegalega",
+                "Cijerah - Ciwastra",
+                "Elang - Gedebage",/*31*/
+                "Abdulmuis -Mengger",
+                "Cicadas - Elang",
+                "Antapani - Ciroyom",
+                "Cibiru - Cicadas",
+                "Sekemirung - Panyileukan",
+                "Caringin - Sadang Serang",
+                "Cibaduyut - Karang Setra",
+                "Cibogo - Elang"
+
+        };
+        int[] gambar=new int[]{
+                R.drawable.abdul_muis_cicaheum_via_binong,
+                R.drawable.abdul_muis_cicaheum_via_aceh,
+                R.drawable.abdul_muis_dago,
+                R.drawable.abdul_muis_ledeng,
+                R.drawable.abdul_muis_elang,
+                R.drawable.cicaheum_ledeng,
+                R.drawable.cicaheum_ciroyom,
+                R.drawable.cicaheum_ciwastra,
+                R.drawable.cicaheum_cibaduyut,
+                R.drawable.dago_sthall,
+                R.drawable.sthall_sadang_serang,
+                R.drawable.ciumbuleuit_sthall,
+                R.drawable.ciumbuleuit_sthall2,
+                R.drawable.sthall_gedebage,
+                R.drawable.sthall_sarijadi,
+                R.drawable.sthall_gunung_batu,
+                R.drawable.margahayu_ledeng,
+                R.drawable.riungbandung_dago,
+                R.drawable.caringin_dago,
+                R.drawable.panghegar_dipatiukur,
+                R.drawable.ciroyom_sarijadi,
+                R.drawable.ciroyom_sarijadi2,
+                R.drawable.bumi_asri_ciroyom,
+                R.drawable.cikudapateuh_ciroyom,
+                R.drawable.buah_batu_sederhana,
+                R.drawable.cijerah_sederhana,
+                R.drawable.cimindi_sederhana,
+                R.drawable.ciwastra_uber,
+                R.drawable.cisitu_tegalega,
+                R.drawable.cijerah_ciwastra,
+                R.drawable.elang_uber,
+                R.drawable.abdulmuis_mengger,
+                R.drawable.cicadas_elang,
+                R.drawable.antapani_ciroyom,
+                R.drawable.cibiru_cicadas,
+                R.drawable.sekemirung_panyileukan_dago_gedebage,
+                R.drawable.caringin_sadang_serang,
+                R.drawable.cibaduyut_karang_setra,
+                R.drawable.cibogo_elang
+        };
+
+        if(ff.equals("Abdulmuis - Cicaheum via Binong")){
+            posisank=0;
+        }
+        else if(ff.equals("Abdulmuis - Cicaheum via Aceh")){
+            posisank=1;
+
+        }else if(ff.equals("Abdulmuis - Dago")){
+            posisank=2;
+
+        }else if(ff.equals("Abdulmuis - Ledeng")){
+            posisank=3;
+
+        }else if(ff.equals("Abdulmuis - Elang")){
+            posisank=4;
+
+        }else if(ff.equals("Cicaheum - Ledeng")){
+            posisank=5;
+
+        }else if(ff.equals("Cicaheum - Ciroyom")){
+            posisank=6;
+
+        }else if(ff.equals("Cicaheum - Ciwastra")){
+            posisank=7;
+        }else if(ff.equals("Cicaheum - Cibaduyut")){
+            posisank=8;
+
+        }else if(ff.equals("Dago - ST Hall")){
+            posisank=9;
+
+        }else if(ff.equals("ST Hall - Sadang Serang")){
+            posisank=10;
+
+        }else if(ff.equals("Cimbuleuit - ST Hall via Eykman")){
+            posisank=11;
+
+        }else if(ff.equals("Cimbuleuit - ST Hall via Cihampelas")){
+            posisank=12;
+
+        }else if(ff.equals("ST Hall - Gedebage")){
+            posisank=13;
+
+        }else if(ff.equals("ST Hall - Sarijadi")){
+            posisank=14;
+
+        }else if(ff.equals("ST Hall - Gunung Batu")){
+            posisank=15;
+
+        }else if(ff.equals("Margahayu - Ledeng")){
+            posisank=16;
+
+        }else if(ff.equals("Riung Bandung - Dago")){
+            posisank=17;
+
+        }else if(ff.equals("Caringin - Dago")){
+            posisank=18;
+
+        }else if(ff.equals("Panghegar - Dipatiukur")){
+            posisank=19;
+
+        }else if(ff.equals("Ciroyom - Sarijadi via Sukajadi")){
+            posisank=20;
+
+        }else if(ff.equals("Ciroyom - Sarijadi via Setrasari")){
+            posisank=21;
+
+        }else if(ff.equals("Bumi Asri - Ciroyom")){
+            posisank=22;
+
+        }else if(ff.equals("Cikudapateh - Ciroyom")){
+            posisank=23;
+
+        }else if(ff.equals("Buah Batu - Sederhana")){
+            posisank=24;
+
+        }else if(ff.equals("Cijerah - Sederhana")){
+            posisank=25;
+
+        }else if(ff.equals("Sederhana - Cimindi")){
+            posisank=26;
+
+        }else if(ff.equals("Ciwastra - Ujungberung")){
+            posisank=27;
+
+        }else if(ff.equals("Cisitu - Tegalega")){
+            posisank=28;
+
+        }else if(ff.equals("Cijerah - Ciwastra")){
+            posisank=29;
+
+        }else if(ff.equals("Elang - Gedebage")){
+            posisank=30;
+
+        }else if(ff.equals("Abdulmuis - Mengger")){
+            posisank=31;
+
+        }else if(ff.equals("Cicadas - Elang")){
+            posisank=32;
+
+        }else if(ff.equals("Antapani - Ciroyom")){
+            posisank=33;
+
+        }else if(ff.equals("Cibiru - Cicadas")){
+            posisank=34;
+
+        }else if(ff.equals("Sekemirung - Panyileukan")){
+            posisank=35;
+
+        }else if(ff.equals("Caringin - Sadang Serang")){
+            posisank=36;
+
+        }else if(ff.equals("Cibaduyut - Karang Setra")){
+            posisank=37;
+
+        }else if(ff.equals("Cibogo - Elang")){
+            posisank=38;
+
+        }
+        viewPager.setVisibility(View.VISIBLE);
+        adapter = new ViewPagerAdapterRutetes2(Tes2.this, namesArr5, namesArr2,gambar);
+        viewPager.setAdapter(adapter);
+        viewPager.setCurrentItem(posisank);
+
+    }
 }
