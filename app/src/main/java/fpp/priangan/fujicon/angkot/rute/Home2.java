@@ -38,6 +38,10 @@ import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.ActivityCompat;
+<<<<<<< HEAD
+=======
+import android.support.v4.app.FragmentActivity;
+>>>>>>> origin/master
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBar;
@@ -66,8 +70,16 @@ import com.google.android.gms.maps.model.Polyline;
 import com.google.android.gms.maps.model.PolylineOptions;
 //import com.google.android.gms.vision.barcode.Barcode;
 
+<<<<<<< HEAD
 import fpp.priangan.fujicon.angkot.CustomListhome;
 import fpp.priangan.fujicon.angkot.R;
+=======
+import fpp.priangan.fujicon.angkot.CustomListRute;
+import fpp.priangan.fujicon.angkot.CustomListhome;
+import fpp.priangan.fujicon.angkot.R;
+import fpp.priangan.fujicon.angkot.adapters.ViewPagerAdapter;
+import fpp.priangan.fujicon.angkot.adapters.ViewPagerAdapterRute;
+>>>>>>> origin/master
 import fpp.priangan.fujicon.angkot.djikstra2.SQLHelper;
 import fpp.priangan.fujicon.angkot.sheet.GMapV2GetRouteDirection;
 import fpp.priangan.fujicon.angkot.slide.TheApp;
@@ -184,6 +196,7 @@ public class Home2 extends AppCompatActivity implements android.location.Locatio
 
 	};
 	int[] gambar=new int[]{
+<<<<<<< HEAD
 			R.drawable.b01,
             /*R.drawable.abdul_muis_cicaheum_via_binong,*/
 			R.drawable.a02,
@@ -205,6 +218,29 @@ public class Home2 extends AppCompatActivity implements android.location.Locatio
 			R.drawable.a18,
 			R.drawable.a19,
 			R.drawable.a20,
+=======
+			R.drawable.abdul_muis_cicaheum_via_aceh,
+            /*R.drawable.abdul_muis_cicaheum_via_binong,*/
+			R.drawable.abdul_muis_dago,
+			R.drawable.abdul_muis_ledeng,
+			R.drawable.abdul_muis_elang,
+			R.drawable.cicaheum_ledeng,
+			R.drawable.cicaheum_ciroyom,
+			R.drawable.cicaheum_ciwastra,
+			R.drawable.cicaheum_cibaduyut,
+			R.drawable.dago_sthall,
+			R.drawable.sthall_sadang_serang,
+			R.drawable.ciumbuleuit_sthall,
+			R.drawable.sthall_gedebage,
+			R.drawable.sthall_sarijadi,
+			R.drawable.sthall_gunung_batu,
+			R.drawable.margahayu_ledeng,
+			R.drawable.riungbandung_dago,
+			R.drawable.caringin_dago,
+			R.drawable.panghegar_dipatiukur,
+			R.drawable.ciroyom_sarijadi,
+			R.drawable.bumi_asri_ciroyom,
+>>>>>>> origin/master
 			R.drawable.cikudapateuh_ciroyom,
 			R.drawable.buah_batu_sederhana,
 			R.drawable.cijerah_sederhana,

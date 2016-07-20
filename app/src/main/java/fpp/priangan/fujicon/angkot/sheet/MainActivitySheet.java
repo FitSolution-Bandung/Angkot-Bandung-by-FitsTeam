@@ -1,5 +1,9 @@
 package fpp.priangan.fujicon.angkot.sheet;
 
+<<<<<<< HEAD
+=======
+import android.Manifest;
+>>>>>>> origin/master
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.ProgressDialog;
@@ -28,6 +32,10 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.flipboard.bottomsheet.BottomSheetLayout;
+<<<<<<< HEAD
+=======
+import com.flipboard.bottomsheet.commons.IntentPickerSheetView;
+>>>>>>> origin/master
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.google.android.gms.common.api.GoogleApiClient;
@@ -50,6 +58,11 @@ import java.util.List;
 
 import fpp.priangan.fujicon.angkot.PlaceArrayAdapter;
 import fpp.priangan.fujicon.angkot.R;
+<<<<<<< HEAD
+=======
+import fpp.priangan.fujicon.angkot.adapters.ViewPagerAdapter;
+import fpp.priangan.fujicon.angkot.adapters.ViewPagerAdapter2;
+>>>>>>> origin/master
 
 
 public class MainActivitySheet extends ActionBarActivity implements View.OnClickListener,
@@ -225,7 +238,11 @@ try {
     };
 
     int[] gambar=new int[]{
+<<<<<<< HEAD
             R.drawable.b01
+=======
+            R.drawable.abdul_muis_cicaheum_via_aceh
+>>>>>>> origin/master
     };
 
     // Locate the ViewPager in viewpager_main.xml

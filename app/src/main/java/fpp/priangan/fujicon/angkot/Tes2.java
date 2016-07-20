@@ -90,6 +90,10 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 
+<<<<<<< HEAD
+=======
+import fpp.priangan.fujicon.angkot.adapters.ViewPagerAdapterRute;
+>>>>>>> origin/master
 import fpp.priangan.fujicon.angkot.adapters.ViewPagerAdapterRutetes2;
 import fpp.priangan.fujicon.angkot.djikstra2.Get_koordinat_awal_akhir;
 import fpp.priangan.fujicon.angkot.djikstra2.GraphToArray;
@@ -107,16 +111,24 @@ public class Tes2 extends AppCompatActivity implements
         View.OnClickListener, LocationListener,NavigationView.OnNavigationItemSelectedListener,GoogleMap.OnMapClickListener {
     ///////////////////
     private Marker lastClicked;
+<<<<<<< HEAD
     String as="35->336->37->38->39->40->48->49->50->51->52->53->54->55->56->57->58->59->60->61->62->63->64->65->66->67->68->69->70->71->14->15->16->17->18->19->20->21->22->75->76->77->78->79->80->26->27->72->73->74";
 
     String jalurhsplit,jalurhsplit2,replace_jalur;
     String[] namesArr,namesArr2,namesArr3,namesArr5,namesArr6;
+=======
+    String jalurhsplit,jalurhsplit2,replace_jalur;
+    String[] namesArr,namesArr2,namesArr3,namesArr5;
+>>>>>>> origin/master
     int [] namesArr4;
     int ghh=0,posisank = 0;
     ArrayList<String> list1jalur = new ArrayList<String>();
     ArrayList<String> list1jalur2 = new ArrayList<String>();
     ArrayList<String> list1jalur3 = new ArrayList<String>();
+<<<<<<< HEAD
     ArrayList<String> list1jalur4 = new ArrayList<String>();
+=======
+>>>>>>> origin/master
     // DB
     LatLng lokasiuserpertama,lokasitujuanpertama;
     public ProgressDialog dialog;
@@ -262,6 +274,7 @@ public class Tes2 extends AppCompatActivity implements
     };
     FloatingActionButton fab3,fab4,fab5,fabgo,fabpr;
     int[] gambar2=new int[]{
+<<<<<<< HEAD
             R.drawable.a01,
             R.drawable.b01,
             R.drawable.a02,
@@ -285,6 +298,31 @@ public class Tes2 extends AppCompatActivity implements
             R.drawable.a19,
             R.drawable.b19,
             R.drawable.a20,
+=======
+            R.drawable.abdul_muis_cicaheum_via_binong,
+            R.drawable.abdul_muis_cicaheum_via_aceh,
+            R.drawable.abdul_muis_dago,
+            R.drawable.abdul_muis_ledeng,
+            R.drawable.abdul_muis_elang,
+            R.drawable.cicaheum_ledeng,
+            R.drawable.cicaheum_ciroyom,
+            R.drawable.cicaheum_ciwastra,
+            R.drawable.cicaheum_cibaduyut,
+            R.drawable.dago_sthall,
+            R.drawable.sthall_sadang_serang,
+            R.drawable.ciumbuleuit_sthall,
+            R.drawable.ciumbuleuit_sthall2,
+            R.drawable.sthall_gedebage,
+            R.drawable.sthall_sarijadi,
+            R.drawable.sthall_gunung_batu,
+            R.drawable.margahayu_ledeng,
+            R.drawable.riungbandung_dago,
+            R.drawable.caringin_dago,
+            R.drawable.panghegar_dipatiukur,
+            R.drawable.ciroyom_sarijadi,
+            R.drawable.ciroyom_sarijadi2,
+            R.drawable.bumi_asri_ciroyom,
+>>>>>>> origin/master
             R.drawable.cikudapateuh_ciroyom,
             R.drawable.buah_batu_sederhana,
             R.drawable.cijerah_sederhana,
@@ -304,6 +342,7 @@ public class Tes2 extends AppCompatActivity implements
     };
 
     int[] gambar=new int[]{
+<<<<<<< HEAD
             R.drawable.a01,
             R.drawable.b01,
             R.drawable.a02,
@@ -327,6 +366,31 @@ public class Tes2 extends AppCompatActivity implements
             R.drawable.a19,
             R.drawable.b19,
             R.drawable.a20,
+=======
+            R.drawable.abdul_muis_cicaheum_via_binong,
+            R.drawable.abdul_muis_cicaheum_via_aceh,
+            R.drawable.abdul_muis_dago,
+            R.drawable.abdul_muis_ledeng,
+            R.drawable.abdul_muis_elang,
+            R.drawable.cicaheum_ledeng,
+            R.drawable.cicaheum_ciroyom,
+            R.drawable.cicaheum_ciwastra,
+            R.drawable.cicaheum_cibaduyut,
+            R.drawable.dago_sthall,
+            R.drawable.sthall_sadang_serang,
+            R.drawable.ciumbuleuit_sthall,
+            R.drawable.ciumbuleuit_sthall2,
+            R.drawable.sthall_gedebage,
+            R.drawable.sthall_sarijadi,
+            R.drawable.sthall_gunung_batu,
+            R.drawable.margahayu_ledeng,
+            R.drawable.riungbandung_dago,
+            R.drawable.caringin_dago,
+            R.drawable.panghegar_dipatiukur,
+            R.drawable.ciroyom_sarijadi,
+            R.drawable.ciroyom_sarijadi2,
+            R.drawable.bumi_asri_ciroyom,
+>>>>>>> origin/master
             R.drawable.cikudapateuh_ciroyom,
             R.drawable.buah_batu_sederhana,
             R.drawable.cijerah_sederhana,
@@ -2469,6 +2533,7 @@ public class Tes2 extends AppCompatActivity implements
 
     }
     public void onPageSelected(int pos) {
+<<<<<<< HEAD
         if(pos==0 || pos==1 || pos==2 || pos==3|| pos==4 || pos==5) {
             try {
                 ghh = ghh + 1;
@@ -2486,6 +2551,12 @@ public class Tes2 extends AppCompatActivity implements
 
 
 
+=======
+        if(pos==1) {
+            try {
+                ghh = ghh + 1;
+                angkotda();
+>>>>>>> origin/master
             } catch (Exception e) {
 
             }
@@ -3066,8 +3137,11 @@ public class Tes2 extends AppCompatActivity implements
         client.disconnect();
     }
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/master
 //    @Override
 //    public boolean onNavigationItemSelected(MenuItem item) {
 //        // Handle navigation view item clicks here.
@@ -4962,13 +5036,19 @@ public class Tes2 extends AppCompatActivity implements
             cursor.moveToPosition(ae);
             list1jalur.add(cursor.getString(0).toString());
             list1jalur2.add(cursor.getString(1).toString());
+<<<<<<< HEAD
             list1jalur4.add(cursor.getString(2).toString());
+=======
+>>>>>>> origin/master
             list1jalur3.add(cursor.getString(7).toString());
         }
         namesArr5 = list1jalur.toArray(new String[list1jalur.size()]);
         namesArr2 = list1jalur2.toArray(new String[list1jalur2.size()]);
         namesArr3 = list1jalur3.toArray(new String[list1jalur3.size()]);
+<<<<<<< HEAD
         namesArr6 = list1jalur4.toArray(new String[list1jalur4.size()]);
+=======
+>>>>>>> origin/master
 //
 //        for(int ){
 //
@@ -5951,7 +6031,11 @@ public class Tes2 extends AppCompatActivity implements
                 jalurBiasa.addAll(lat_lng_gbr).width(15).color(warna_).geodesic(true);
                 mMap.addPolyline(jalurBiasa);
 
+<<<<<<< HEAD
             }else {//if(r == 1){
+=======
+            }else if(r == 1){
+>>>>>>> origin/master
 //                __global_yourCoordinate_exist2=new LatLng(lats, lngs);
                 llat2=lats; llong2=lngs;
                 __global_yourCoordinate_exist3=new LatLng(lats, lngs);
@@ -7787,6 +7871,7 @@ public class Tes2 extends AppCompatActivity implements
 
         };
         int[] gambar=new int[]{
+<<<<<<< HEAD
                 R.drawable.a01,
                 R.drawable.b01,
                 R.drawable.a02,
@@ -7810,6 +7895,31 @@ public class Tes2 extends AppCompatActivity implements
                 R.drawable.a19,
                 R.drawable.b19,
                 R.drawable.a20,
+=======
+                R.drawable.abdul_muis_cicaheum_via_binong,
+                R.drawable.abdul_muis_cicaheum_via_aceh,
+                R.drawable.abdul_muis_dago,
+                R.drawable.abdul_muis_ledeng,
+                R.drawable.abdul_muis_elang,
+                R.drawable.cicaheum_ledeng,
+                R.drawable.cicaheum_ciroyom,
+                R.drawable.cicaheum_ciwastra,
+                R.drawable.cicaheum_cibaduyut,
+                R.drawable.dago_sthall,
+                R.drawable.sthall_sadang_serang,
+                R.drawable.ciumbuleuit_sthall,
+                R.drawable.ciumbuleuit_sthall2,
+                R.drawable.sthall_gedebage,
+                R.drawable.sthall_sarijadi,
+                R.drawable.sthall_gunung_batu,
+                R.drawable.margahayu_ledeng,
+                R.drawable.riungbandung_dago,
+                R.drawable.caringin_dago,
+                R.drawable.panghegar_dipatiukur,
+                R.drawable.ciroyom_sarijadi,
+                R.drawable.ciroyom_sarijadi2,
+                R.drawable.bumi_asri_ciroyom,
+>>>>>>> origin/master
                 R.drawable.cikudapateuh_ciroyom,
                 R.drawable.buah_batu_sederhana,
                 R.drawable.cijerah_sederhana,
@@ -7945,14 +8055,20 @@ public class Tes2 extends AppCompatActivity implements
             posisank=38;
 
         }
+<<<<<<< HEAD
 
 
         viewPager.setVisibility(View.VISIBLE);
         adapter = new ViewPagerAdapterRutetes2(Tes2.this, namesArr5, namesArr2,gambar, namesArr6);
+=======
+        viewPager.setVisibility(View.VISIBLE);
+        adapter = new ViewPagerAdapterRutetes2(Tes2.this, namesArr5, namesArr2,gambar);
+>>>>>>> origin/master
         viewPager.setAdapter(adapter);
         viewPager.setCurrentItem(posisank);
 
     }
+<<<<<<< HEAD
 
     public void drawJalur2(String[] exp) throws JSONException{
         int start = 0;
@@ -7998,4 +8114,6 @@ public class Tes2 extends AppCompatActivity implements
 
 
     }
+=======
+>>>>>>> origin/master
 }

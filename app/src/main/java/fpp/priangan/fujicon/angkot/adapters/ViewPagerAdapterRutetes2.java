@@ -1,7 +1,10 @@
 package fpp.priangan.fujicon.angkot.adapters;
 
 import android.content.Context;
+<<<<<<< HEAD
 import android.database.Cursor;
+=======
+>>>>>>> origin/master
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
@@ -17,21 +20,30 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 import fpp.priangan.fujicon.angkot.R;
+<<<<<<< HEAD
 import fpp.priangan.fujicon.angkot.djikstra2.SQLHelper;
+=======
+>>>>>>> origin/master
 
 public class ViewPagerAdapterRutetes2 extends PagerAdapter {
 	// Declare Variables
 
 
 	MarkerOptions markerOptions;
+<<<<<<< HEAD
 	SQLHelper dbHelper;
 
 	Cursor cursor;
+=======
+>>>>>>> origin/master
 	GoogleMap mMap;
 	Context context;
 	String[] no;
 	String[] nama_trayek;
+<<<<<<< HEAD
 	String[] simpull;
+=======
+>>>>>>> origin/master
 	LatLng[] lalat;
 	/*String[] warna;
 	String[] nama_trayek;
@@ -41,11 +53,18 @@ public class ViewPagerAdapterRutetes2 extends PagerAdapter {
 	int[] gambar;
 	LayoutInflater inflater;
 	int pos=3;
+<<<<<<< HEAD
 	public ViewPagerAdapterRutetes2(Context context, String[] no, String[] nama_trayek, int[] gambar, String[] simpull) {
 		this.context = context;
 		this.no=no;
 		this.nama_trayek=nama_trayek;
 		this.simpull=simpull;
+=======
+	public ViewPagerAdapterRutetes2(Context context, String[] no, String[] nama_trayek, int[] gambar) {
+		this.context = context;
+		this.no=no;
+		this.nama_trayek=nama_trayek;
+>>>>>>> origin/master
 	//	this.lalat=lalat;
 		/*this.warna=warna;
 		this.lintasan=lintasan;
@@ -70,9 +89,14 @@ public class ViewPagerAdapterRutetes2 extends PagerAdapter {
 	public Object instantiateItem(ViewGroup container, int position) {
 
 		// Declare Variables
+<<<<<<< HEAD
 		int posisank = 0;
 		final TextView no1;
 		final TextView warna1,simpul;
+=======
+		final TextView no1;
+		TextView warna1;
+>>>>>>> origin/master
 		TextView nama_trayek1;
 		TextView lintasan1;
 		final TextView harga1;
@@ -86,7 +110,10 @@ public class ViewPagerAdapterRutetes2 extends PagerAdapter {
 
 		// Locate the TextViews in viewpager_item.xml
 		no1 = (TextView) itemView.findViewById(R.id.no);
+<<<<<<< HEAD
 		simpul = (TextView) itemView.findViewById(R.id.simpul);
+=======
+>>>>>>> origin/master
 		/*warna1 = (TextView) itemView.findViewById(R.id.warna);
 		nama_trayek1 = (TextView) itemView.findViewById(R.id.nama_trayek);
 		lintasan1 = (TextView) itemView.findViewById(R.id.lintasan);
@@ -125,6 +152,7 @@ public class ViewPagerAdapterRutetes2 extends PagerAdapter {
 		// Locate the ImageView in viewpager_item.xml
 		gambar1 = (ImageView) itemView.findViewById(R.id.gambar);
 		no1.setText(nama_trayek[position]);
+<<<<<<< HEAD
 		simpul.setText(simpull[position]);
 //		String gg="R.drawable.cibogo_elang";
 //		int fh= Integer.parseInt(gg);
@@ -298,6 +326,14 @@ public class ViewPagerAdapterRutetes2 extends PagerAdapter {
 
 			}
 		});
+=======
+//		String gg="R.drawable.cibogo_elang";
+//		int fh= Integer.parseInt(gg);
+//		gambar1.setImageResource(fh);
+		gambar1.setImageResource(gambar[position]);
+
+
+>>>>>>> origin/master
 		// Add viewpager_item.xml to ViewPager
 		((ViewPager) container).addView(itemView);
 

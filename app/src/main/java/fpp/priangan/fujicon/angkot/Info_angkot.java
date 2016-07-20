@@ -1,10 +1,18 @@
 package fpp.priangan.fujicon.angkot;
 
+<<<<<<< HEAD
+=======
+import android.app.ActionBar;
+>>>>>>> origin/master
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
+<<<<<<< HEAD
+=======
+import android.support.v7.app.ActionBarDrawerToggle;
+>>>>>>> origin/master
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
@@ -12,6 +20,10 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+<<<<<<< HEAD
+=======
+import android.widget.Toast;
+>>>>>>> origin/master
 
 public class Info_angkot extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -78,6 +90,7 @@ public class Info_angkot extends AppCompatActivity
 
 
     private Integer imageid[] = {
+<<<<<<< HEAD
             R.drawable.a01,
             R.drawable.b01,
             R.drawable.a02,
@@ -101,6 +114,31 @@ public class Info_angkot extends AppCompatActivity
             R.drawable.a19,
             R.drawable.b19,
             R.drawable.a20,
+=======
+            R.drawable.abdul_muis_cicaheum_via_binong,
+            R.drawable.abdul_muis_cicaheum_via_aceh,
+            R.drawable.abdul_muis_dago,
+            R.drawable.abdul_muis_ledeng,
+            R.drawable.abdul_muis_elang,
+            R.drawable.cicaheum_ledeng,
+            R.drawable.cicaheum_ciroyom,
+            R.drawable.cicaheum_ciwastra,
+            R.drawable.cicaheum_cibaduyut,
+            R.drawable.dago_sthall,
+            R.drawable.sthall_sadang_serang,
+            R.drawable.ciumbuleuit_sthall,
+            R.drawable.ciumbuleuit_sthall2,
+            R.drawable.sthall_gedebage,
+            R.drawable.sthall_sarijadi,
+            R.drawable.sthall_gunung_batu,
+            R.drawable.margahayu_ledeng,
+            R.drawable.riungbandung_dago,
+            R.drawable.caringin_dago,
+            R.drawable.panghegar_dipatiukur,
+            R.drawable.ciroyom_sarijadi,
+            R.drawable.ciroyom_sarijadi2,
+            R.drawable.bumi_asri_ciroyom,
+>>>>>>> origin/master
             R.drawable.cikudapateuh_ciroyom,
             R.drawable.buah_batu_sederhana,
             R.drawable.cijerah_sederhana,

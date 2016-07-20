@@ -166,7 +166,11 @@ public class dijkstra {
                 }//end for simpul yang dikerjakan
 
                 //BULETIN BOBOT MINIMUM YANG UDH DIDAPAT  dan HAPUS RUAS YANG BERHUBUNGAN              
+<<<<<<< HEAD
                 if(status_baris1 > 0){
+=======
+                if(status_baris1 > 0){                    
+>>>>>>> origin/master
                     graph[simpul_lama][dapat_indexAsliBobot] = graph[simpul_lama][dapat_indexAsliBobot]+"->y";
 
                     //HAPUS RUAS LAIN
@@ -185,7 +189,11 @@ public class dijkstra {
                         }//end for baris
                     }//end for kolom  
                 }//end if cek status_baris sudah ->y atau ->t semua apa belum
+<<<<<<< HEAD
 
+=======
+       
+>>>>>>> origin/master
                 //Nilai * yg ditandai
                 nilaiSimpulFixYgDitandai = perbandinganSemuaBobot.get(0);                
                 //System.out.println("nilaiSimpulFixYgDitandai : "+nilaiSimpulFixYgDitandai);

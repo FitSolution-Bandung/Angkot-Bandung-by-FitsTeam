@@ -92,6 +92,7 @@ public class SampleExpandableListAdapter extends BaseExpandableListAdapter imple
         String child = getChild(groupPosition, childPosition);
         int id_res = 0; 
         if(groupPosition == 0){ 
+<<<<<<< HEAD
         	if(childPosition == 0) id_res = R.drawable.a12;
         }
         else if(groupPosition == 1){ 
@@ -116,12 +117,42 @@ public class SampleExpandableListAdapter extends BaseExpandableListAdapter imple
         }
         else if(groupPosition == 3){
             if(childPosition == 0) id_res = R.drawable.a18;
+=======
+        	if(childPosition == 0) id_res = R.drawable.sthall_gedebage;
+        }
+        else if(groupPosition == 1){ 
+        	if(childPosition == 0) id_res = R.drawable.abdul_muis_cicaheum_via_aceh;
+        	if(childPosition == 1) id_res = R.drawable.abdul_muis_dago;
+            if(childPosition == 2) id_res = R.drawable.abdul_muis_ledeng;
+            if(childPosition == 3) id_res = R.drawable.antapani_ciroyom;
+            if(childPosition == 4) id_res = R.drawable.sthall_gedebage;
+            if(childPosition == 5) id_res = R.drawable.sthall_sadang_serang;
+        }
+        else if(groupPosition == 2){ 
+        	if(childPosition == 0) id_res = R.drawable.abdul_muis_elang;
+        	if(childPosition == 1) id_res = R.drawable.antapani_ciroyom;
+        	if(childPosition == 2) id_res = R.drawable.cicaheum_cibaduyut;
+            if(childPosition == 3) id_res = R.drawable.cibiru_cicadas;
+            if(childPosition == 4) id_res = R.drawable.cicadas_elang;
+            if(childPosition == 5) id_res = R.drawable.cicaheum_ciwastra;
+            if(childPosition == 6) id_res = R.drawable.cikudapateuh_ciroyom;
+            if(childPosition == 7) id_res = R.drawable.riungbandung_dago;
+            if(childPosition == 8) id_res = R.drawable.sthall_gedebage;
+            if(childPosition == 9) id_res = R.drawable.margahayu_ledeng;
+        }
+        else if(groupPosition == 3){
+            if(childPosition == 0) id_res = R.drawable.panghegar_dipatiukur;
+>>>>>>> origin/master
         }
         else if(groupPosition == 4){
             if(childPosition == 0) id_res = R.drawable.antapani_ciroyom;
         }
         else if(groupPosition == 5){
+<<<<<<< HEAD
             if(childPosition == 0) id_res = R.drawable.a04;
+=======
+            if(childPosition == 0) id_res = R.drawable.abdul_muis_elang;
+>>>>>>> origin/master
             if(childPosition == 1) id_res = R.drawable.cibaduyut_karang_setra;
             if(childPosition == 2) id_res = R.drawable.cikudapateuh_ciroyom;
             if(childPosition == 3) id_res = R.drawable.cisitu_tegalega;
@@ -136,11 +167,16 @@ public class SampleExpandableListAdapter extends BaseExpandableListAdapter imple
             if(childPosition == 2) id_res = R.drawable.cikudapateuh_ciroyom;
         }
         else if(groupPosition == 8){
+<<<<<<< HEAD
             if(childPosition == 0) id_res = R.drawable.a03;
+=======
+            if(childPosition == 0) id_res = R.drawable.abdul_muis_ledeng;
+>>>>>>> origin/master
             if(childPosition == 1) id_res = R.drawable.buah_batu_sederhana;
             if(childPosition == 2) id_res = R.drawable.cicadas_elang;
             if(childPosition == 3) id_res = R.drawable.cijerah_ciwastra;
             if(childPosition == 4) id_res = R.drawable.cikudapateuh_ciroyom;
+<<<<<<< HEAD
             if(childPosition == 5) id_res = R.drawable.a12;
         }
         else if(groupPosition == 9){
@@ -150,12 +186,24 @@ public class SampleExpandableListAdapter extends BaseExpandableListAdapter imple
         }
         else if(groupPosition == 10){
             if(childPosition == 0) id_res = R.drawable.a08;
+=======
+            if(childPosition == 5) id_res = R.drawable.sthall_gedebage;
+        }
+        else if(groupPosition == 9){
+            if(childPosition == 0) id_res = R.drawable.caringin_dago;
+            if(childPosition == 1) id_res = R.drawable.sthall_sadang_serang;
+            if(childPosition == 2) id_res = R.drawable.cijerah_ciwastra;
+        }
+        else if(groupPosition == 10){
+            if(childPosition == 0) id_res = R.drawable.cicaheum_cibaduyut;
+>>>>>>> origin/master
             if(childPosition == 1) id_res = R.drawable.cibaduyut_karang_setra;
         }
         else if(groupPosition == 11){
             if(childPosition == 0) id_res = R.drawable.cibiru_cicadas;
         }
         else if(groupPosition == 12){
+<<<<<<< HEAD
             if(childPosition == 0) id_res = R.drawable.a03;
             if(childPosition == 1) id_res = R.drawable.antapani_ciroyom;
             if(childPosition == 2) id_res = R.drawable.buah_batu_sederhana;
@@ -184,10 +232,41 @@ public class SampleExpandableListAdapter extends BaseExpandableListAdapter imple
         }
         else if(groupPosition == 15){
             if(childPosition == 0) id_res = R.drawable.a11;
+=======
+            if(childPosition == 0) id_res = R.drawable.abdul_muis_ledeng;
+            if(childPosition == 1) id_res = R.drawable.antapani_ciroyom;
+            if(childPosition == 2) id_res = R.drawable.buah_batu_sederhana;
+            if(childPosition == 3) id_res = R.drawable.caringin_dago;
+            if(childPosition == 4) id_res = R.drawable.cicaheum_ciroyom;
+            if(childPosition == 5) id_res = R.drawable.cicaheum_ledeng;
+            if(childPosition == 6) id_res = R.drawable.cisitu_tegalega;
+            if(childPosition == 7) id_res = R.drawable.ciumbuleuit_sthall;
+            if(childPosition == 8) id_res = R.drawable.sthall_gunung_batu;
+            if(childPosition == 9) id_res = R.drawable.margahayu_ledeng;
+        }
+        else if(groupPosition == 13){
+            if(childPosition == 0) id_res = R.drawable.abdul_muis_ledeng;
+            if(childPosition == 1) id_res = R.drawable.cicaheum_ciroyom;
+            if(childPosition == 2) id_res = R.drawable.cicaheum_ledeng;
+            if(childPosition == 3) id_res = R.drawable.ciumbuleuit_sthall;
+            if(childPosition == 4) id_res = R.drawable.margahayu_ledeng;
+        }
+        else if(groupPosition == 14){
+            if(childPosition == 0) id_res = R.drawable.antapani_ciroyom;
+            if(childPosition == 1) id_res = R.drawable.bumi_asri_ciroyom;
+            if(childPosition == 2) id_res = R.drawable.caringin_dago;
+            if(childPosition == 3) id_res = R.drawable.cicaheum_ciroyom;
+            if(childPosition == 4) id_res = R.drawable.cikudapateuh_ciroyom;
+            if(childPosition == 5) id_res = R.drawable.ciroyom_sarijadi;
+        }
+        else if(groupPosition == 15){
+            if(childPosition == 0) id_res = R.drawable.ciumbuleuit_sthall;
+>>>>>>> origin/master
         }
         else if(groupPosition == 16){
             if(childPosition == 0) id_res = R.drawable.buah_batu_sederhana;
             if(childPosition == 1) id_res = R.drawable.cicadas_elang;
+<<<<<<< HEAD
             if(childPosition == 2) id_res = R.drawable.a12;
         }
         else if(groupPosition == 17){
@@ -197,6 +276,17 @@ public class SampleExpandableListAdapter extends BaseExpandableListAdapter imple
         }
         else if(groupPosition == 18){
             if(childPosition == 0) id_res = R.drawable.a04;
+=======
+            if(childPosition == 2) id_res = R.drawable.sthall_gedebage;
+        }
+        else if(groupPosition == 17){
+            if(childPosition == 0) id_res = R.drawable.cicaheum_ciroyom;
+            if(childPosition == 1) id_res = R.drawable.riungbandung_dago;
+            if(childPosition == 2) id_res = R.drawable.panghegar_dipatiukur;
+        }
+        else if(groupPosition == 18){
+            if(childPosition == 0) id_res = R.drawable.abdul_muis_elang;
+>>>>>>> origin/master
             if(childPosition == 1) id_res = R.drawable.cibogo_elang;
             if(childPosition == 2) id_res = R.drawable.cicadas_elang;
         }
@@ -208,6 +298,7 @@ public class SampleExpandableListAdapter extends BaseExpandableListAdapter imple
         else if(groupPosition == 20){
             if(childPosition == 0) id_res = R.drawable.cicadas_elang;
             if(childPosition == 1) id_res = R.drawable.cikudapateuh_ciroyom;
+<<<<<<< HEAD
             if(childPosition == 2) id_res = R.drawable.a12;
         }
         else if(groupPosition == 21){
@@ -237,19 +328,57 @@ public class SampleExpandableListAdapter extends BaseExpandableListAdapter imple
             if(childPosition == 0) id_res = R.drawable.a03;
             if(childPosition == 1) id_res = R.drawable.a20;
             if(childPosition == 2) id_res = R.drawable.a17;
+=======
+            if(childPosition == 2) id_res = R.drawable.sthall_gedebage;
+        }
+        else if(groupPosition == 21){
+            if(childPosition == 0) id_res = R.drawable.cibiru_cicadas;
+            if(childPosition == 1) id_res = R.drawable.sthall_gedebage;
+        }
+        else if(groupPosition == 22){
+            if(childPosition == 0) id_res = R.drawable.abdul_muis_dago;
+            if(childPosition == 1) id_res = R.drawable.caringin_dago;
+            if(childPosition == 2) id_res = R.drawable.dago_sthall;
+            if(childPosition == 3) id_res = R.drawable.riungbandung_dago;
+        }
+        else if(groupPosition == 23){
+            if(childPosition == 0) id_res = R.drawable.antapani_ciroyom;
+            if(childPosition == 1) id_res = R.drawable.cicaheum_cibaduyut;
+            if(childPosition == 2) id_res = R.drawable.cibiru_cicadas;
+            if(childPosition == 3) id_res = R.drawable.cicadas_elang;
+            if(childPosition == 4) id_res = R.drawable.cicaheum_ciwastra;
+            if(childPosition == 5) id_res = R.drawable.riungbandung_dago;
+            if(childPosition == 6) id_res = R.drawable.panghegar_dipatiukur;
+            if(childPosition == 7) id_res = R.drawable.margahayu_ledeng;
+        }
+        else if(groupPosition == 24){
+            if(childPosition == 0) id_res = R.drawable.caringin_dago;
+        }
+        else if(groupPosition == 25){
+            if(childPosition == 0) id_res = R.drawable.abdul_muis_ledeng;
+            if(childPosition == 1) id_res = R.drawable.bumi_asri_ciroyom;
+            if(childPosition == 2) id_res = R.drawable.caringin_dago;
+>>>>>>> origin/master
             if(childPosition == 3) id_res = R.drawable.caringin_sadang_serang;
             if(childPosition == 4) id_res = R.drawable.cibaduyut_karang_setra;
             if(childPosition == 5) id_res = R.drawable.cibogo_elang;
             if(childPosition == 6) id_res = R.drawable.cijerah_sederhana;
         }
         else if(groupPosition == 26){
+<<<<<<< HEAD
             if(childPosition == 0) id_res = R.drawable.b01;
             if(childPosition == 1) id_res = R.drawable.a02;
             if(childPosition == 2) id_res = R.drawable.a03;
+=======
+            if(childPosition == 0) id_res = R.drawable.abdul_muis_cicaheum_via_aceh;
+            if(childPosition == 1) id_res = R.drawable.abdul_muis_dago;
+            if(childPosition == 2) id_res = R.drawable.abdul_muis_ledeng;
+>>>>>>> origin/master
             if(childPosition == 3) id_res = R.drawable.buah_batu_sederhana;
             if(childPosition == 4) id_res = R.drawable.cicadas_elang;
         }
         else if(groupPosition == 27){
+<<<<<<< HEAD
             if(childPosition == 0) id_res = R.drawable.a20;
             if(childPosition == 1) id_res = R.drawable.a17;
             if(childPosition == 2) id_res = R.drawable.cibaduyut_karang_setra;
@@ -259,12 +388,24 @@ public class SampleExpandableListAdapter extends BaseExpandableListAdapter imple
             if(childPosition == 6) id_res = R.drawable.a12;
             if(childPosition == 7) id_res = R.drawable.a14;
             if(childPosition == 8) id_res = R.drawable.a13;
+=======
+            if(childPosition == 0) id_res = R.drawable.bumi_asri_ciroyom;
+            if(childPosition == 1) id_res = R.drawable.caringin_dago;
+            if(childPosition == 2) id_res = R.drawable.cibaduyut_karang_setra;
+            if(childPosition == 3) id_res = R.drawable.cikudapateuh_ciroyom;
+            if(childPosition == 4) id_res = R.drawable.cisitu_tegalega;
+            if(childPosition == 5) id_res = R.drawable.ciumbuleuit_sthall;
+            if(childPosition == 6) id_res = R.drawable.sthall_gedebage;
+            if(childPosition == 7) id_res = R.drawable.sthall_gunung_batu;
+            if(childPosition == 8) id_res = R.drawable.sthall_sarijadi;
+>>>>>>> origin/master
         }
         else if(groupPosition == 28){
             if(childPosition == 0) id_res = R.drawable.antapani_ciroyom;
             if(childPosition == 1) id_res = R.drawable.buah_batu_sederhana;
             if(childPosition == 2) id_res = R.drawable.caringin_sadang_serang;
             if(childPosition == 3) id_res = R.drawable.cicadas_elang;
+<<<<<<< HEAD
             if(childPosition == 4) id_res = R.drawable.a11;
             if(childPosition == 5) id_res = R.drawable.a12;
             if(childPosition == 6) id_res = R.drawable.a14;
@@ -281,6 +422,24 @@ public class SampleExpandableListAdapter extends BaseExpandableListAdapter imple
             if(childPosition == 6) id_res = R.drawable.a16;
             if(childPosition == 7) id_res = R.drawable.a18;
             if(childPosition == 8) id_res = R.drawable.a15;
+=======
+            if(childPosition == 4) id_res = R.drawable.ciumbuleuit_sthall;
+            if(childPosition == 5) id_res = R.drawable.sthall_gedebage;
+            if(childPosition == 6) id_res = R.drawable.sthall_gunung_batu;
+            if(childPosition == 7) id_res = R.drawable.sthall_sadang_serang;
+            if(childPosition == 8) id_res = R.drawable.sthall_sarijadi;
+        }
+        else if(groupPosition == 29){
+            if(childPosition == 0) id_res = R.drawable.antapani_ciroyom;
+            if(childPosition == 1) id_res = R.drawable.cicaheum_cibaduyut;
+            if(childPosition == 2) id_res = R.drawable.cibiru_cicadas;
+            if(childPosition == 3) id_res = R.drawable.cicadas_elang;
+            if(childPosition == 4) id_res = R.drawable.cicaheum_ciwastra;
+            if(childPosition == 5) id_res = R.drawable.cijerah_ciwastra;
+            if(childPosition == 6) id_res = R.drawable.riungbandung_dago;
+            if(childPosition == 7) id_res = R.drawable.panghegar_dipatiukur;
+            if(childPosition == 8) id_res = R.drawable.margahayu_ledeng;
+>>>>>>> origin/master
         }
         else if(groupPosition == 30){
             if(childPosition == 0) id_res = R.drawable.cijerah_ciwastra;
@@ -288,25 +447,41 @@ public class SampleExpandableListAdapter extends BaseExpandableListAdapter imple
         else if(groupPosition == 31){
             if(childPosition == 0) id_res = R.drawable.cicadas_elang;
             if(childPosition == 1) id_res = R.drawable.cikudapateuh_ciroyom;
+<<<<<<< HEAD
             if(childPosition == 2) id_res = R.drawable.a12;
+=======
+            if(childPosition == 2) id_res = R.drawable.sthall_gedebage;
+>>>>>>> origin/master
         }
         else if(groupPosition == 32){
             if(childPosition == 0) id_res = R.drawable.antapani_ciroyom;
             if(childPosition == 1) id_res = R.drawable.buah_batu_sederhana;
+<<<<<<< HEAD
             if(childPosition == 2) id_res = R.drawable.a20;
             if(childPosition == 3) id_res = R.drawable.a17;
+=======
+            if(childPosition == 2) id_res = R.drawable.bumi_asri_ciroyom;
+            if(childPosition == 3) id_res = R.drawable.caringin_dago;
+>>>>>>> origin/master
             if(childPosition == 4) id_res = R.drawable.caringin_sadang_serang;
             if(childPosition == 5) id_res = R.drawable.cibaduyut_karang_setra;
             if(childPosition == 6) id_res = R.drawable.cibogo_elang;
             if(childPosition == 7) id_res = R.drawable.cicadas_elang;
+<<<<<<< HEAD
             if(childPosition == 8) id_res = R.drawable.a06;
             if(childPosition == 9) id_res = R.drawable.cijerah_sederhana;
             if(childPosition == 10) id_res = R.drawable.a19;
+=======
+            if(childPosition == 8) id_res = R.drawable.cicaheum_ciroyom;
+            if(childPosition == 9) id_res = R.drawable.cijerah_sederhana;
+            if(childPosition == 10) id_res = R.drawable.ciroyom_sarijadi;
+>>>>>>> origin/master
             if(childPosition == 11) id_res = R.drawable.cisitu_tegalega;
         }
         else if(groupPosition == 33){
             if(childPosition == 0) id_res = R.drawable.antapani_ciroyom;
             if(childPosition == 1) id_res = R.drawable.buah_batu_sederhana;
+<<<<<<< HEAD
             if(childPosition == 2) id_res = R.drawable.a20;
             if(childPosition == 3) id_res = R.drawable.a17;
             if(childPosition == 4) id_res = R.drawable.caringin_sadang_serang;
@@ -324,24 +499,52 @@ public class SampleExpandableListAdapter extends BaseExpandableListAdapter imple
         }
         else if(groupPosition == 34){
             if(childPosition == 0) id_res = R.drawable.a04;
+=======
+            if(childPosition == 2) id_res = R.drawable.bumi_asri_ciroyom;
+            if(childPosition == 3) id_res = R.drawable.caringin_dago;
+            if(childPosition == 4) id_res = R.drawable.caringin_sadang_serang;
+            if(childPosition == 5) id_res = R.drawable.cibaduyut_karang_setra;
+            if(childPosition == 6) id_res = R.drawable.cicadas_elang;
+            if(childPosition == 7) id_res = R.drawable.cicaheum_ciroyom;
+            if(childPosition == 8) id_res = R.drawable.cijerah_sederhana;
+            if(childPosition == 9) id_res = R.drawable.ciroyom_sarijadi;
+            if(childPosition == 10) id_res = R.drawable.cisitu_tegalega;
+            if(childPosition == 11) id_res = R.drawable.sthall_sarijadi;
+            if(childPosition == 12) id_res = R.drawable.ciumbuleuit_sthall;
+            if(childPosition == 13) id_res = R.drawable.sthall_gedebage;
+            if(childPosition == 14) id_res = R.drawable.sthall_gunung_batu;
+            if(childPosition == 15) id_res = R.drawable.sthall_sadang_serang;
+        }
+        else if(groupPosition == 34){
+            if(childPosition == 0) id_res = R.drawable.abdul_muis_elang;
+>>>>>>> origin/master
             if(childPosition == 1) id_res = R.drawable.cibaduyut_karang_setra;
             if(childPosition == 2) id_res = R.drawable.cikudapateuh_ciroyom;
             if(childPosition == 3) id_res = R.drawable.cisitu_tegalega;
         }
         else if(groupPosition == 35){
             if(childPosition == 0) id_res = R.drawable.cijerah_ciwastra;
+<<<<<<< HEAD
             if(childPosition == 1) id_res = R.drawable.a12;
+=======
+            if(childPosition == 1) id_res = R.drawable.sthall_gedebage;
+>>>>>>> origin/master
         }
         else if(groupPosition == 36){
             if(childPosition == 0) id_res = R.drawable.cibaduyut_karang_setra;
             if(childPosition == 1) id_res = R.drawable.cijerah_ciwastra;
             if(childPosition == 2) id_res = R.drawable.cikudapateuh_ciroyom;
         }else if(groupPosition == 37){
+<<<<<<< HEAD
             if(childPosition == 0) id_res = R.drawable.a02;
+=======
+            if(childPosition == 0) id_res = R.drawable.abdul_muis_dago;
+>>>>>>> origin/master
         }
         else if(groupPosition == 38){
             if(childPosition == 0) id_res = R.drawable.buah_batu_sederhana;
             if(childPosition == 1) id_res = R.drawable.cijerah_sederhana;
+<<<<<<< HEAD
             if(childPosition == 2) id_res = R.drawable.a19;
             if(childPosition == 3) id_res = R.drawable.a11;
             if(childPosition == 4) id_res = R.drawable.a15;
@@ -382,6 +585,48 @@ public class SampleExpandableListAdapter extends BaseExpandableListAdapter imple
             if(childPosition == 9) id_res = R.drawable.a18;
             if(childPosition == 10) id_res = R.drawable.a14;
             if(childPosition == 11) id_res = R.drawable.a15;
+=======
+            if(childPosition == 2) id_res = R.drawable.ciroyom_sarijadi;
+            if(childPosition == 3) id_res = R.drawable.ciumbuleuit_sthall;
+            if(childPosition == 4) id_res = R.drawable.margahayu_ledeng;
+        }
+        else if(groupPosition == 39){
+            if(childPosition == 0) id_res = R.drawable.abdul_muis_elang;
+            if(childPosition == 1) id_res = R.drawable.bumi_asri_ciroyom;
+            if(childPosition == 2) id_res = R.drawable.caringin_dago;
+            if(childPosition == 3) id_res = R.drawable.cicaheum_cibaduyut;
+            if(childPosition == 4) id_res = R.drawable.cibiru_cicadas;
+            if(childPosition == 5) id_res = R.drawable.cijerah_ciwastra;
+            if(childPosition == 6) id_res = R.drawable.riungbandung_dago;
+            if(childPosition == 7) id_res = R.drawable.sthall_gedebage;
+            if(childPosition == 8) id_res = R.drawable.margahayu_ledeng;
+        }
+        else if(groupPosition == 40){
+            if(childPosition == 0) id_res = R.drawable.abdul_muis_cicaheum_via_aceh;
+            if(childPosition == 1) id_res = R.drawable.abdul_muis_dago;
+            if(childPosition == 2) id_res = R.drawable.abdul_muis_ledeng;
+            if(childPosition == 3) id_res = R.drawable.antapani_ciroyom;
+            if(childPosition == 4) id_res = R.drawable.panghegar_dipatiukur;
+            if(childPosition == 5) id_res = R.drawable.sthall_gedebage;
+            if(childPosition == 6) id_res = R.drawable.sthall_sadang_serang;
+        }
+        else if(groupPosition == 41){
+            if(childPosition == 0) id_res = R.drawable.panghegar_dipatiukur;
+        }
+        else if(groupPosition == 42){
+            if(childPosition == 0) id_res = R.drawable.abdul_muis_ledeng;
+            if(childPosition == 1) id_res = R.drawable.antapani_ciroyom;
+            if(childPosition == 2) id_res = R.drawable.buah_batu_sederhana;
+            if(childPosition == 3) id_res = R.drawable.bumi_asri_ciroyom;
+            if(childPosition == 4) id_res = R.drawable.caringin_dago;
+            if(childPosition == 5) id_res = R.drawable.caringin_sadang_serang;
+            if(childPosition == 6) id_res = R.drawable.cisitu_tegalega;
+            if(childPosition == 7) id_res = R.drawable.ciumbuleuit_sthall;
+            if(childPosition == 8) id_res = R.drawable.dago_sthall;
+            if(childPosition == 9) id_res = R.drawable.panghegar_dipatiukur;
+            if(childPosition == 10) id_res = R.drawable.sthall_gunung_batu;
+            if(childPosition == 11) id_res = R.drawable.margahayu_ledeng;
+>>>>>>> origin/master
         }
         
         if (child != null) {

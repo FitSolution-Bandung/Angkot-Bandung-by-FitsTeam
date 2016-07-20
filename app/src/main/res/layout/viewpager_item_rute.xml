@@ -245,6 +245,7 @@
             android:textSize="16dp"
             android:textColor="#ffffff" />
 
+<<<<<<< HEAD
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -255,6 +256,8 @@
             android:allowUndo="true"
             android:visibility="gone" />
 
+=======
+>>>>>>> origin/master
     </LinearLayout>
 
     <!--TextView

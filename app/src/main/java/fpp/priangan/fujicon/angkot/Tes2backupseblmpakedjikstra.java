@@ -189,6 +189,7 @@ public class Tes2backupseblmpakedjikstra extends AppCompatActivity implements
 
 
     int[] gambar=new int[]{
+<<<<<<< HEAD
             R.drawable.b01,
             R.drawable.a01,
             R.drawable.a02,
@@ -210,6 +211,29 @@ public class Tes2backupseblmpakedjikstra extends AppCompatActivity implements
             R.drawable.a18,
             R.drawable.a19,
             R.drawable.a20,
+=======
+            R.drawable.abdul_muis_cicaheum_via_aceh,
+            R.drawable.abdul_muis_cicaheum_via_binong,
+            R.drawable.abdul_muis_dago,
+            R.drawable.abdul_muis_ledeng,
+            R.drawable.abdul_muis_elang,
+            R.drawable.cicaheum_ledeng,
+            R.drawable.cicaheum_ciroyom,
+            R.drawable.cicaheum_ciwastra,
+            R.drawable.cicaheum_cibaduyut,
+            R.drawable.dago_sthall,
+            R.drawable.sthall_sadang_serang,
+            R.drawable.ciumbuleuit_sthall,
+            R.drawable.sthall_gedebage,
+            R.drawable.sthall_sarijadi,
+            R.drawable.sthall_gunung_batu,
+            R.drawable.margahayu_ledeng,
+            R.drawable.riungbandung_dago,
+            R.drawable.caringin_dago,
+            R.drawable.panghegar_dipatiukur,
+            R.drawable.ciroyom_sarijadi,
+            R.drawable.bumi_asri_ciroyom,
+>>>>>>> origin/master
             R.drawable.cikudapateuh_ciroyom,
             R.drawable.buah_batu_sederhana,
             R.drawable.cijerah_sederhana,

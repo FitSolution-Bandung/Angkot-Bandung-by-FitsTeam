@@ -174,7 +174,11 @@
         android:src="@drawable/merah1"
         android:layout_alignBottom="@+id/fab"
         app:backgroundTint="#fdfdfd"
+<<<<<<< HEAD
         android:visibility="gone" />
+=======
+        android:visibility="gone"/>
+>>>>>>> origin/master
     <!--android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"
         android:layout_width="wrap_content"
@@ -194,8 +198,13 @@
         android:layout_alignBottom="@+id/map_rute_angkot"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
+<<<<<<< HEAD
         android:layout_marginTop="-310dp"
         android:visibility="gone" />
+=======
+        android:layout_marginTop="-90dp"
+        android:visibility="gone"/>
+>>>>>>> origin/master
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab5"
@@ -207,7 +216,11 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_marginTop="-90dp"
+<<<<<<< HEAD
         android:visibility="gone" />
+=======
+        android:visibility="gone"/>
+>>>>>>> origin/master
 
     <!--<android.support.v4.view.ViewPager-->
         <!--android:id="@+id/pager"-->

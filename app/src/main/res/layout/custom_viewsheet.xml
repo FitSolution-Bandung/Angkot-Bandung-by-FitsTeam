@@ -30,21 +30,33 @@
             android:layout_height="wrap_content"
             android:id="@+id/button"
             android:layout_gravity="center_horizontal"
+<<<<<<< HEAD
             android:background="@drawable/b01" />
+=======
+            android:background="@drawable/abdul_muis_cicaheum_via_aceh" />
+>>>>>>> origin/master
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="05"
             android:id="@+id/button2"
+<<<<<<< HEAD
             android:background="@drawable/a04" />
+=======
+            android:background="@drawable/abdul_muis_elang" />
+>>>>>>> origin/master
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="12"
             android:id="@+id/button3"
+<<<<<<< HEAD
             android:background="@drawable/a06" />
+=======
+            android:background="@drawable/cicaheum_ciroyom" />
+>>>>>>> origin/master
     </LinearLayout>
 
     <LinearLayout

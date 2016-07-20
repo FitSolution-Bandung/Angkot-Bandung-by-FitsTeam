@@ -34,17 +34,32 @@ import android.location.Geocoder;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
+<<<<<<< HEAD
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.ActivityCompat;
+=======
+import android.net.Uri;
+import android.os.AsyncTask;
+import android.os.Bundle;
+import android.os.Handler;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.NavigationView;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.app.FragmentActivity;
+>>>>>>> origin/master
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+<<<<<<< HEAD
+=======
+import android.view.LayoutInflater;
+>>>>>>> origin/master
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
@@ -69,8 +84,17 @@ import com.google.android.gms.maps.model.Polyline;
 import com.google.android.gms.maps.model.PolylineOptions;
 //import com.google.android.gms.vision.barcode.Barcode;
 
+<<<<<<< HEAD
 import fpp.priangan.fujicon.angkot.CustomListhome;
 import fpp.priangan.fujicon.angkot.R;
+=======
+import javax.security.auth.callback.Callback;
+
+import fpp.priangan.fujicon.angkot.CustomListRute;
+import fpp.priangan.fujicon.angkot.CustomListhome;
+import fpp.priangan.fujicon.angkot.R;
+import fpp.priangan.fujicon.angkot.adapters.ViewPagerAdapter;
+>>>>>>> origin/master
 import fpp.priangan.fujicon.angkot.adapters.ViewPagerAdapterRute;
 import fpp.priangan.fujicon.angkot.djikstra2.SQLHelper;
 import fpp.priangan.fujicon.angkot.sheet.GMapV2GetRouteDirection;
@@ -346,6 +370,7 @@ public class Home extends AppCompatActivity implements LocationListener,
 
 	};
 	int[] gambar=new int[]{
+<<<<<<< HEAD
 			R.drawable.a01,
 			R.drawable.b01,
 			R.drawable.a02,
@@ -369,6 +394,31 @@ public class Home extends AppCompatActivity implements LocationListener,
 			R.drawable.a19,
 			R.drawable.b19,
 			R.drawable.a20,
+=======
+			R.drawable.abdul_muis_cicaheum_via_binong,
+			R.drawable.abdul_muis_cicaheum_via_aceh,
+			R.drawable.abdul_muis_dago,
+			R.drawable.abdul_muis_ledeng,
+			R.drawable.abdul_muis_elang,
+			R.drawable.cicaheum_ledeng,
+			R.drawable.cicaheum_ciroyom,
+			R.drawable.cicaheum_ciwastra,
+			R.drawable.cicaheum_cibaduyut,
+			R.drawable.dago_sthall,
+			R.drawable.sthall_sadang_serang,
+			R.drawable.ciumbuleuit_sthall,
+			R.drawable.ciumbuleuit_sthall2,
+			R.drawable.sthall_gedebage,
+			R.drawable.sthall_sarijadi,
+			R.drawable.sthall_gunung_batu,
+			R.drawable.margahayu_ledeng,
+			R.drawable.riungbandung_dago,
+			R.drawable.caringin_dago,
+			R.drawable.panghegar_dipatiukur,
+			R.drawable.ciroyom_sarijadi,
+			R.drawable.ciroyom_sarijadi2,
+			R.drawable.bumi_asri_ciroyom,
+>>>>>>> origin/master
 			R.drawable.cikudapateuh_ciroyom,
 			R.drawable.buah_batu_sederhana,
 			R.drawable.cijerah_sederhana,
@@ -2593,6 +2643,7 @@ public class Home extends AppCompatActivity implements LocationListener,
 
 			};
 			int[] gambar=new int[]{
+<<<<<<< HEAD
 					R.drawable.a01,
 					R.drawable.b01,
 					R.drawable.a02,
@@ -2616,6 +2667,31 @@ public class Home extends AppCompatActivity implements LocationListener,
 					R.drawable.a19,
 					R.drawable.a19,
 					R.drawable.a20,
+=======
+					R.drawable.abdul_muis_cicaheum_via_binong,
+					R.drawable.abdul_muis_cicaheum_via_aceh,
+					R.drawable.abdul_muis_dago,
+					R.drawable.abdul_muis_ledeng,
+					R.drawable.abdul_muis_elang,
+					R.drawable.cicaheum_ledeng,
+					R.drawable.cicaheum_ciroyom,
+					R.drawable.cicaheum_ciwastra,
+					R.drawable.cicaheum_cibaduyut,
+					R.drawable.dago_sthall,
+					R.drawable.sthall_sadang_serang,
+					R.drawable.ciumbuleuit_sthall,
+					R.drawable.ciumbuleuit_sthall2,
+					R.drawable.sthall_gedebage,
+					R.drawable.sthall_sarijadi,
+					R.drawable.sthall_gunung_batu,
+					R.drawable.margahayu_ledeng,
+					R.drawable.riungbandung_dago,
+					R.drawable.caringin_dago,
+					R.drawable.panghegar_dipatiukur,
+					R.drawable.ciroyom_sarijadi,
+					R.drawable.ciroyom_sarijadi,
+					R.drawable.bumi_asri_ciroyom,
+>>>>>>> origin/master
 					R.drawable.cikudapateuh_ciroyom,
 					R.drawable.buah_batu_sederhana,
 					R.drawable.cijerah_sederhana,
