@@ -90,7 +90,6 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 
-import fpp.priangan.fujicon.angkot.adapters.ViewPagerAdapterRute;
 import fpp.priangan.fujicon.angkot.adapters.ViewPagerAdapterRutetes2;
 import fpp.priangan.fujicon.angkot.djikstra2.Get_koordinat_awal_akhir;
 import fpp.priangan.fujicon.angkot.djikstra2.GraphToArray;
@@ -108,13 +107,16 @@ public class Tes2 extends AppCompatActivity implements
         View.OnClickListener, LocationListener,NavigationView.OnNavigationItemSelectedListener,GoogleMap.OnMapClickListener {
     ///////////////////
     private Marker lastClicked;
+    String as="35->336->37->38->39->40->48->49->50->51->52->53->54->55->56->57->58->59->60->61->62->63->64->65->66->67->68->69->70->71->14->15->16->17->18->19->20->21->22->75->76->77->78->79->80->26->27->72->73->74";
+
     String jalurhsplit,jalurhsplit2,replace_jalur;
-    String[] namesArr,namesArr2,namesArr3,namesArr5;
+    String[] namesArr,namesArr2,namesArr3,namesArr5,namesArr6;
     int [] namesArr4;
     int ghh=0,posisank = 0;
     ArrayList<String> list1jalur = new ArrayList<String>();
     ArrayList<String> list1jalur2 = new ArrayList<String>();
     ArrayList<String> list1jalur3 = new ArrayList<String>();
+    ArrayList<String> list1jalur4 = new ArrayList<String>();
     // DB
     LatLng lokasiuserpertama,lokasitujuanpertama;
     public ProgressDialog dialog;
@@ -260,29 +262,29 @@ public class Tes2 extends AppCompatActivity implements
     };
     FloatingActionButton fab3,fab4,fab5,fabgo,fabpr;
     int[] gambar2=new int[]{
-            R.drawable.abdul_muis_cicaheum_via_binong,
-            R.drawable.abdul_muis_cicaheum_via_aceh,
-            R.drawable.abdul_muis_dago,
-            R.drawable.abdul_muis_ledeng,
-            R.drawable.abdul_muis_elang,
-            R.drawable.cicaheum_ledeng,
-            R.drawable.cicaheum_ciroyom,
-            R.drawable.cicaheum_ciwastra,
-            R.drawable.cicaheum_cibaduyut,
-            R.drawable.dago_sthall,
-            R.drawable.sthall_sadang_serang,
-            R.drawable.ciumbuleuit_sthall,
-            R.drawable.ciumbuleuit_sthall2,
-            R.drawable.sthall_gedebage,
-            R.drawable.sthall_sarijadi,
-            R.drawable.sthall_gunung_batu,
-            R.drawable.margahayu_ledeng,
-            R.drawable.riungbandung_dago,
-            R.drawable.caringin_dago,
-            R.drawable.panghegar_dipatiukur,
-            R.drawable.ciroyom_sarijadi,
-            R.drawable.ciroyom_sarijadi2,
-            R.drawable.bumi_asri_ciroyom,
+            R.drawable.a01,
+            R.drawable.b01,
+            R.drawable.a02,
+            R.drawable.a03,
+            R.drawable.a04,
+            R.drawable.a05,
+            R.drawable.a06,
+            R.drawable.a07,
+            R.drawable.a08,
+            R.drawable.a09,
+            R.drawable.a10,
+            R.drawable.a11,
+            R.drawable.b11,
+            R.drawable.a12,
+            R.drawable.a13,
+            R.drawable.a14,
+            R.drawable.a15,
+            R.drawable.a16,
+            R.drawable.a17,
+            R.drawable.a18,
+            R.drawable.a19,
+            R.drawable.b19,
+            R.drawable.a20,
             R.drawable.cikudapateuh_ciroyom,
             R.drawable.buah_batu_sederhana,
             R.drawable.cijerah_sederhana,
@@ -302,29 +304,29 @@ public class Tes2 extends AppCompatActivity implements
     };
 
     int[] gambar=new int[]{
-            R.drawable.abdul_muis_cicaheum_via_binong,
-            R.drawable.abdul_muis_cicaheum_via_aceh,
-            R.drawable.abdul_muis_dago,
-            R.drawable.abdul_muis_ledeng,
-            R.drawable.abdul_muis_elang,
-            R.drawable.cicaheum_ledeng,
-            R.drawable.cicaheum_ciroyom,
-            R.drawable.cicaheum_ciwastra,
-            R.drawable.cicaheum_cibaduyut,
-            R.drawable.dago_sthall,
-            R.drawable.sthall_sadang_serang,
-            R.drawable.ciumbuleuit_sthall,
-            R.drawable.ciumbuleuit_sthall2,
-            R.drawable.sthall_gedebage,
-            R.drawable.sthall_sarijadi,
-            R.drawable.sthall_gunung_batu,
-            R.drawable.margahayu_ledeng,
-            R.drawable.riungbandung_dago,
-            R.drawable.caringin_dago,
-            R.drawable.panghegar_dipatiukur,
-            R.drawable.ciroyom_sarijadi,
-            R.drawable.ciroyom_sarijadi2,
-            R.drawable.bumi_asri_ciroyom,
+            R.drawable.a01,
+            R.drawable.b01,
+            R.drawable.a02,
+            R.drawable.a03,
+            R.drawable.a04,
+            R.drawable.a05,
+            R.drawable.a06,
+            R.drawable.a07,
+            R.drawable.a08,
+            R.drawable.a09,
+            R.drawable.a10,
+            R.drawable.a11,
+            R.drawable.b11,
+            R.drawable.a12,
+            R.drawable.a13,
+            R.drawable.a14,
+            R.drawable.a15,
+            R.drawable.a16,
+            R.drawable.a17,
+            R.drawable.a18,
+            R.drawable.a19,
+            R.drawable.b19,
+            R.drawable.a20,
             R.drawable.cikudapateuh_ciroyom,
             R.drawable.buah_batu_sederhana,
             R.drawable.cijerah_sederhana,
@@ -2467,10 +2469,23 @@ public class Tes2 extends AppCompatActivity implements
 
     }
     public void onPageSelected(int pos) {
-        if(pos==1) {
+        if(pos==0 || pos==1 || pos==2 || pos==3|| pos==4 || pos==5) {
             try {
                 ghh = ghh + 1;
-                angkotda();
+               // angkotda();
+                // Query DB to show all
+                dbHelper = new SQLHelper(this);
+                final SQLiteDatabase db = dbHelper.getReadableDatabase();
+                try {
+
+                    String[] exp = as.split("->");
+                    drawJalur2(exp);
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+
+
+
             } catch (Exception e) {
 
             }
@@ -3050,6 +3065,8 @@ public class Tes2 extends AppCompatActivity implements
         AppIndex.AppIndexApi.end(client, viewAction);
         client.disconnect();
     }
+
+
 
 //    @Override
 //    public boolean onNavigationItemSelected(MenuItem item) {
@@ -4945,11 +4962,13 @@ public class Tes2 extends AppCompatActivity implements
             cursor.moveToPosition(ae);
             list1jalur.add(cursor.getString(0).toString());
             list1jalur2.add(cursor.getString(1).toString());
+            list1jalur4.add(cursor.getString(2).toString());
             list1jalur3.add(cursor.getString(7).toString());
         }
         namesArr5 = list1jalur.toArray(new String[list1jalur.size()]);
         namesArr2 = list1jalur2.toArray(new String[list1jalur2.size()]);
         namesArr3 = list1jalur3.toArray(new String[list1jalur3.size()]);
+        namesArr6 = list1jalur4.toArray(new String[list1jalur4.size()]);
 //
 //        for(int ){
 //
@@ -5932,7 +5951,7 @@ public class Tes2 extends AppCompatActivity implements
                 jalurBiasa.addAll(lat_lng_gbr).width(15).color(warna_).geodesic(true);
                 mMap.addPolyline(jalurBiasa);
 
-            }else if(r == 1){
+            }else {//if(r == 1){
 //                __global_yourCoordinate_exist2=new LatLng(lats, lngs);
                 llat2=lats; llong2=lngs;
                 __global_yourCoordinate_exist3=new LatLng(lats, lngs);
@@ -7768,29 +7787,29 @@ public class Tes2 extends AppCompatActivity implements
 
         };
         int[] gambar=new int[]{
-                R.drawable.abdul_muis_cicaheum_via_binong,
-                R.drawable.abdul_muis_cicaheum_via_aceh,
-                R.drawable.abdul_muis_dago,
-                R.drawable.abdul_muis_ledeng,
-                R.drawable.abdul_muis_elang,
-                R.drawable.cicaheum_ledeng,
-                R.drawable.cicaheum_ciroyom,
-                R.drawable.cicaheum_ciwastra,
-                R.drawable.cicaheum_cibaduyut,
-                R.drawable.dago_sthall,
-                R.drawable.sthall_sadang_serang,
-                R.drawable.ciumbuleuit_sthall,
-                R.drawable.ciumbuleuit_sthall2,
-                R.drawable.sthall_gedebage,
-                R.drawable.sthall_sarijadi,
-                R.drawable.sthall_gunung_batu,
-                R.drawable.margahayu_ledeng,
-                R.drawable.riungbandung_dago,
-                R.drawable.caringin_dago,
-                R.drawable.panghegar_dipatiukur,
-                R.drawable.ciroyom_sarijadi,
-                R.drawable.ciroyom_sarijadi2,
-                R.drawable.bumi_asri_ciroyom,
+                R.drawable.a01,
+                R.drawable.b01,
+                R.drawable.a02,
+                R.drawable.a03,
+                R.drawable.a04,
+                R.drawable.a05,
+                R.drawable.a06,
+                R.drawable.a07,
+                R.drawable.a08,
+                R.drawable.a09,
+                R.drawable.a10,
+                R.drawable.a11,
+                R.drawable.b11,
+                R.drawable.a12,
+                R.drawable.a13,
+                R.drawable.a14,
+                R.drawable.a15,
+                R.drawable.a16,
+                R.drawable.a17,
+                R.drawable.a18,
+                R.drawable.a19,
+                R.drawable.b19,
+                R.drawable.a20,
                 R.drawable.cikudapateuh_ciroyom,
                 R.drawable.buah_batu_sederhana,
                 R.drawable.cijerah_sederhana,
@@ -7926,10 +7945,57 @@ public class Tes2 extends AppCompatActivity implements
             posisank=38;
 
         }
+
+
         viewPager.setVisibility(View.VISIBLE);
-        adapter = new ViewPagerAdapterRutetes2(Tes2.this, namesArr5, namesArr2,gambar);
+        adapter = new ViewPagerAdapterRutetes2(Tes2.this, namesArr5, namesArr2,gambar, namesArr6);
         viewPager.setAdapter(adapter);
         viewPager.setCurrentItem(posisank);
+
+    }
+
+    public void drawJalur2(String[] exp) throws JSONException{
+        int start = 0;
+
+        // GAMBAR JALURNYA
+        // ======================
+        dbHelper = new SQLHelper(this);
+        SQLiteDatabase db = dbHelper.getReadableDatabase();
+
+        for(int i = 0; i < exp.length-1; i++){
+
+            ArrayList<LatLng> lat_lng = new ArrayList<LatLng>();
+
+            cursor = db.rawQuery("SELECT jalur FROM graph where simpul_awal ="+exp[start]+" and simpul_tujuan ="+exp[(++start)], null);
+            cursor.moveToFirst();
+
+
+            // dapatkan koordinat Lat,Lng dari field koordinat (3)
+            String json = cursor.getString(0).toString();
+
+            // get JSON
+            JSONObject jObject = new JSONObject(json);
+            JSONArray jArrCoordinates = jObject.getJSONArray("coordinates");
+
+            // get coordinate JSON
+            for(int w = 0; w < jArrCoordinates.length(); w++){
+
+                JSONArray latlngs = jArrCoordinates.getJSONArray(w);
+                Double lats = latlngs.getDouble(0);
+                Double lngs = latlngs.getDouble(1);
+
+
+                lat_lng.add( new LatLng(lats, lngs) );
+
+            }
+
+            // buat rute
+            PolylineOptions jalurBiasa = new PolylineOptions();
+            jalurBiasa.addAll(lat_lng).width(5).color(0xff00ff00).geodesic(true);
+            mMap.addPolyline(jalurBiasa);
+
+        }
+
 
     }
 }

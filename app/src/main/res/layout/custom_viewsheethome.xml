@@ -30,13 +30,13 @@
             android:layout_height="wrap_content"
             android:text="05"
             android:id="@+id/button2"
-            android:background="@drawable/abdul_muis_elang" />
+            android:background="@drawable/a04" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/button"
-            android:background="@drawable/abdul_muis_cicaheum_via_aceh"
+            android:background="@drawable/b01"
             android:gravity="center" />
 
         <Button
@@ -44,7 +44,7 @@
             android:layout_height="wrap_content"
             android:text="12"
             android:id="@+id/button3"
-            android:background="@drawable/cicaheum_ciroyom" />
+            android:background="@drawable/a06" />
     </LinearLayout>
 
     <LinearLayout

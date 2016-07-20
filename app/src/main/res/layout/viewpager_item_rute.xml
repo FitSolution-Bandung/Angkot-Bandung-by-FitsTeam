@@ -245,6 +245,16 @@
             android:textSize="16dp"
             android:textColor="#ffffff" />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/simpul"
+            android:layout_gravity="center_horizontal"
+            android:textSize="16dp"
+            android:textColor="#ffffff"
+            android:allowUndo="true"
+            android:visibility="gone" />
+
     </LinearLayout>
 
     <!--TextView
