@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="fpp.priangan.fujicon.angkot">
+
+    <!-- map-->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="com.example.mapdemo.permission.MAPS_RECEIVE"/>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <!-- map-->
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+
+        <!-- map-->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyAEcW3mL2LfdV-0SaPCfptNE2VWOTE-W84"/>
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <!-- com.google.android.maps.v2.API_KEYmap     AIzaSyAqVXwUlnHBzr2mmW2-7NcbAplcE7NXVbo-->
+
+        <!--android:label="@string/app_name"-->
+        <activity
+            android:name="fpp.priangan.fujicon.angkot.SplashScreen"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="fpp.priangan.fujicon.angkot.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+            android:name="fpp.priangan.fujicon.angkot.Mode_angkot"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+
+        <activity
+            android:name="fpp.priangan.fujicon.angkot.Rute_angkot"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+
+
+        <activity
+        android:name="fpp.priangan.fujicon.angkot.PlacesAutoCompleteActivity"
+        android:theme="@style/AppTheme.NoActionBar">
+
+    </activity>
+        <activity
+            android:name="fpp.priangan.fujicon.angkot.Tes"
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
+        <activity
+            android:name="fpp.priangan.fujicon.angkot.Tes2"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name="fpp.priangan.fujicon.angkot.Penghitungan_trayek"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name="fpp.priangan.fujicon.angkot.Info_jalan"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name="fpp.priangan.fujicon.angkot.Info_angkot"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+            <activity
+            android:name="fpp.priangan.fujicon.angkot.slide.MainActivitySlide"
+            android:theme="@style/AppTheme.NoActionBar"
+                android:parentActivityName=".MainActivity" >
+                <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value=".MainActivity" />
+            </activity>
+        <activity
+            android:name="fpp.priangan.fujicon.angkot.sheet.MainActivitySheet"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+
+        <activity
+            android:name="fpp.priangan.fujicon.angkot.Info_jalan_angkot"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name="fpp.priangan.fujicon.angkot.Info_detail_angkot"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName=".Info_angkot" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Info_angkot" />
+        </activity>
+
+        <activity
+            android:name="fpp.priangan.fujicon.angkot.mapfrag"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+
+        <activity
+            android:name="fpp.priangan.fujicon.angkot.time"
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
+        <activity
+            android:name="fpp.priangan.fujicon.angkot.draw.PathGoogleMapActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
+
+        <activity
+            android:name="fpp.priangan.fujicon.angkot.mode"
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
+        <activity
+            android:name="fpp.priangan.fujicon.angkot.utility.MainActivitydirect"
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
+        <activity
+            android:name="fpp.priangan.fujicon.angkot.rute.Home"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName=".Info_angkot" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Info_angkot" />
+        </activity>
+        <activity
+            android:name="fpp.priangan.fujicon.angkot.rute.Home2"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName=".Info_angkot" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Info_angkot" />
+        </activity>
+        <activity
+            android:name="fpp.priangan.fujicon.angkot.expend.MainActivityexp"
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
+        <activity
+            android:name="fpp.priangan.fujicon.angkot.expend.MainActivityexp2"
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
+        <activity
+            android:name="fpp.priangan.fujicon.angkot.about"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name="fpp.priangan.fujicon.angkot.sheet.MainActivitys"
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
+        <activity
+            android:name="fpp.priangan.fujicon.angkot.djikstra2.MainActivitydj"
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
+        <activity
+            android:name="fpp.priangan.fujicon.angkot.expendiable.ExpandablelistActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
+
+
+        <!-- ATTENTION: This was auto-generated to add Google Play services to your project for
+             App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->
+
+    </application>
+    <permission
+        android:name="com.example.mapdemo.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature"/>
+
+
+
+
+</manifest>

@@ -1,0 +1,42 @@
+<com.flipboard.bottomsheet.BottomSheetLayout
+    android:id="@+id/bottomsheet"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+    <LinearLayout
+        android:id="@+id/root"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="1">
+
+        <!--Button
+            android:id="@+id/btn_custom_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Custom View"
+            android:onClick="onClick" />
+
+        <Button
+            android:id="@+id/btn_intent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Open Intent"
+            android:onClick="onClick" /-->
+
+        <fragment
+            android:id="@+id/map_detail_perhitungan_trayek"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="269dp"
+            android:layout_weight="1.18" />
+
+
+
+    </LinearLayout>
+
+</com.flipboard.bottomsheet.BottomSheetLayout>

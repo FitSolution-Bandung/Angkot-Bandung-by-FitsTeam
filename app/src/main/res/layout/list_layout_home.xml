@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+
+    <!--<ImageView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_rowSpan="2"-->
+        <!--android:id="@+id/imageView"-->
+        <!--android:layout_row="0"-->
+        <!--android:layout_column="0"-->
+        <!--android:layout_margin="5dp" />-->
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_rowSpan="2"
+        android:id="@+id/imageView"
+        android:layout_row="0"
+        android:layout_column="0"
+        android:background="@drawable/amj1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="1"
+        android:id="@+id/txtjrk"
+        android:layout_row="1"
+        android:layout_column="1"
+        android:textColor="#ffffff" />
+
+
+    <TextView
+        android:id="@+id/textViewName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_column="1"
+        android:layout_columnSpan="2"
+        android:layout_gravity="fill_horizontal|bottom"
+        android:layout_row="0"
+        android:text=""
+        android:textColor="#f7f6f6" />
+    <TextView
+        android:id="@+id/textViewDesc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_column="1"
+        android:layout_columnSpan="2"
+        android:layout_gravity="fill_horizontal|bottom"
+        android:layout_row="1"
+        android:text=""
+        android:textColor="#fcfafa" />
+    <!--<TextView-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="New Text"-->
+        <!--android:layout_columnWeight="1"-->
+        <!--android:id="@+id/textViewName"-->
+        <!--android:layout_row="0"-->
+        <!--android:layout_column="1"-->
+        <!--android:textColor="#fdfcfc" />-->
+
+
+    <!--<TextView-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="New Text"-->
+        <!--android:layout_columnWeight="1"-->
+        <!--android:id="@+id/textViewDesc"-->
+        <!--android:layout_row="1"-->
+        <!--android:layout_column="1"-->
+        <!--android:textColor="#ffffff" />-->
+
+    <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_columnWeight="1"-->
+        <!--android:id="@+id/txtjrk"-->
+        <!--android:layout_row="1"-->
+        <!--android:layout_column="1"-->
+        <!--android:textColor="#ffffff" />-->
+
+
+</GridLayout>

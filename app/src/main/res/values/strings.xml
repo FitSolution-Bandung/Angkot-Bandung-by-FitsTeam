@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Angkot Bandung</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <!--string name="google_app_id">your app id</string-->
+    <string name="action_settings">Settings</string>
+
+    <string name="autocomplete_hint">Search a Place</string>
+
+    <string name="str_atv_places">Enter Place Here</string>
+    <string name="perhitungan_trayek">Penghitungan Trayek</string>
+    <string name="info_jalan">Informasi Jalan</string>
+    <string name="info_angkot">Informasi Angkot</string>
+    <string name="about">About</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_expandablelist">ExpandablelistActivity</string>
+
+
+
+</resources>

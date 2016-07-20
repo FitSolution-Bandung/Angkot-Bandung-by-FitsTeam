@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="bottomsheet-core-1.4.3">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.flipboard/bottomsheet-core/1.4.3/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.flipboard/bottomsheet-core/1.4.3/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.flipboard/bottomsheet-core/1.4.3/c2cccd764465ad7dfa5b222a2433879a80f4b383/bottomsheet-core-1.4.3-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
