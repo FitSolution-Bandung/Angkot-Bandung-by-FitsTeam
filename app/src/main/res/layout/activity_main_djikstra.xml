@@ -1,0 +1,37 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+    
+		<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			android:id="@+id/content_frame"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:orientation="horizontal" >	    
+			<fragment android:id="@+id/peta"
+		          android:layout_width="match_parent"
+		          android:layout_height="match_parent"
+		          android:name="com.google.android.gms.maps.SupportMapFragment"/>    
+		</FrameLayout>
+
+	<FrameLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentTop="true" >
+	    <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="96dip"
+	        android:orientation="vertical"
+	        android:weightSum="2" >
+		    <Spinner 
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_centerHorizontal="true"
+		        android:layout_centerVertical="true" 
+		        android:id="@+id/spinner_list_smk">
+		    </Spinner>	
+	    </LinearLayout>
+	</FrameLayout>	
+	
+</RelativeLayout>

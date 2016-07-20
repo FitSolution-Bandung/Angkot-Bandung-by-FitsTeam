@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:orientation="vertical"
+	tools:context="fpp.priangan.fujicon.angkot.Info_angkot"
+	tools:showIn="@layout/app_bar_info_jalan">
+    
+    <LinearLayout android:id="@+id/linear1"
+	     android:orientation="horizontal"
+	     android:layout_width="fill_parent"
+	     android:layout_height="wrap_content"
+	     android:layout_alignParentBottom="true"
+		 android:gravity="center" 
+		 android:background="@android:color/white">
+	     <!--<Button  -->
+	         <!--android:id="@+id/btn1"-->
+	         <!--android:layout_width="fill_parent"-->
+	         <!--android:layout_height="wrap_content" -->
+	         <!--android:layout_marginTop="5dp"-->
+	         <!--android:layout_marginBottom="5dp"-->
+	         <!--android:textSize="22dp"-->
+	         <!--android:text="Buy all cars you have selected"  />-->
+     </LinearLayout>   
+     
+    <ExpandableListView
+        android:id="@+id/expandableListView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/linear1"
+		android:groupIndicator="@drawable/group_indicator_selector"
+	    android:background="@android:color/white"
+		android:layout_marginTop="60dp">
+ 	</ExpandableListView>
+	
+    <LinearLayout android:id="@+id/linear2"
+	     android:orientation="vertical"
+	     android:layout_width="fill_parent"
+	     android:layout_height="wrap_content"
+	     android:layout_alignParentTop="true"  
+	     android:gravity="center"
+		 android:background="@android:color/white">
+        <!--<TextView -->
+	        <!--android:id="@+id/text_intro"-->
+	        <!--android:textSize="20sp"-->
+	        <!--android:layout_width="fill_parent"-->
+	        <!--android:layout_height="50dp" -->
+	        <!--android:gravity="center_vertical|center_horizontal"-->
+	        <!--android:textColor = "#FFFFFF"-->
+	        <!--android:text="Select cars you want to buy" /> -->
+     </LinearLayout>     
+     
+</RelativeLayout>
